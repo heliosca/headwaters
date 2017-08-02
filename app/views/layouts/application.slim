@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    - if content_for? :page_title
+      = yield :page_title
+    - else
+      title Headwaters
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = csrf_meta_tags
+    = favicon_link_tag 'favicon.ico'
+
+    meta name='viewport' content='width=device-width, initial-scale=1'
+  body
+    = render 'nav'
+
+    = yield
