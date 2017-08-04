@@ -1,7 +1,7 @@
 #nav-bar {
   border: none;
   transition: all 0.3s ease;
-  background-color: white;
+  background-color: transparent;
   position: fixed;
   width: 100%;
   top: 0;
@@ -57,28 +57,13 @@
     max-height: 0;
     overflow: hidden;
 
-    > div {
+    a {
+      font-size: 16px;
+      color: #222222;
+      padding: 15px 0 15px 20px;
       width: 100%;
-      border-bottom: 1px solid $default-border-color;
-      background-color: rgba(255, 255, 255, 0.90); 
 
-      &:last-child {
-        border-bottom: none;
-
-        a {
-          border-bottom: none;
-        }
-      }
-      
-      > a {
-        display: block;
-        font-size: 16px;
-        color: #222222;
-        padding: 15px 0 15px 20px;
-        width: 100%;
-      }
-
-      &.active > a {
+      &.active {
         font-weight: bold;
       }
     }
@@ -118,23 +103,9 @@
       top: 50%;
       transform: translateY(-50%); 
       border-top: none;
-
-      > div {
-        float: left;
-        width: auto;
-        border: none;
-        background-color: transparent;
-
-        > a {
+      
+      a {
           padding: 5px 15px;
-          border-bottom: none;
-          
-          hr {  
-            display: block;
-            margin: 0;            
-            border-top: 1px solid transparent;              
-          }
-        }
       }
     }
   }

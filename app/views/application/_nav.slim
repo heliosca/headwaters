@@ -5,9 +5,6 @@ nav#nav-bar
 		button#mobile-nav
 			i.fa.fa-bars
 	#nav-items
-		div
-			a href="/" Home
-		div
-			a href="/about" About
-		div
-			a href="/products" Products
+		= link_to "Home", root_path
+		= link_to "About", static_path(:about)
+		= link_to "Products", static_path(:products)
