@@ -1,0 +1,10 @@
+nav#nav-bar
+	.nav-header
+		a.nav-brand href="/"
+			= image_tag("helios.png", id: "nav-logo")
+		button#mobile-nav
+			i.fa.fa-bars
+	#nav-items
+		= link_to "Home", root_path
+		= link_to "About", static_path(:about)
+		= link_to "Products", static_path(:products)
