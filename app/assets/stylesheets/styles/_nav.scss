@@ -1,0 +1,142 @@
+#nav-bar {
+  border: none;
+  transition: all 0.3s ease;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  height: $mobile-nav-height;
+  @include clearfix;
+
+  .nav-header {
+
+    .nav-brand {
+      float: left;
+      padding: 15px 15px;
+      font-size: 18px;
+      line-height: 20px;
+
+      #nav-logo {
+        // opacity: 0.0;
+        transition: opacity 0.3s ease;
+        height: 30px;
+      }
+    }
+
+    #mobile-nav {
+      background-color: transparent;
+      padding: 9px 10px;
+      margin-right: 15px;
+      border: none;
+      font-weight: bold;
+      color: #222222;
+      position: absolute;
+      right: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      cursor: pointer;
+
+      i {
+        font-size: 20px;
+      }
+    }
+  }
+
+  #nav-items {
+    @include clearfix;
+    transition: max-height 0.3s, length 0.3s;
+    position: absolute;
+    top: $mobile-nav-height;
+    padding: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+
+    > div {
+      width: 100%;
+      border-bottom: 1px solid $default-border-color;
+      background-color: rgba(255, 255, 255, 0.90); 
+
+      &:last-child {
+        border-bottom: none;
+
+        a {
+          border-bottom: none;
+        }
+      }
+      
+      > a {
+        display: block;
+        font-size: 16px;
+        color: #222222;
+        padding: 15px 0 15px 20px;
+        width: 100%;
+      }
+
+      &.active > a {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &.dropdown-active, &.visible {
+
+    .nav-header .nav-brand #nav-logo {
+      opacity: 1.0;
+    }
+  }
+
+  &.visible {
+    background-color: rgba(255, 255, 255, 0.95); 
+    box-shadow: 0 3px 5px -3px rgba(0, 0, 0, 0.5);
+  }
+
+  @media #{$tablet-medium} {
+    height: $desktop-nav-height;
+
+    .nav-header {
+
+      .nav-brand #nav-logo {
+        height: 45px;
+      }
+
+      #mobile-nav {
+        display: none;
+      }
+    }
+
+    #nav-items {
+      max-height: none;
+      overflow: visible;
+      width: auto;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%); 
+      border-top: none;
+
+      > div {
+        float: left;
+        width: auto;
+        border: none;
+        background-color: transparent;
+
+        > a {
+          padding: 5px 15px;
+          border-bottom: none;
+          
+          hr {  
+            display: block;
+            margin: 0;            
+            border-top: 1px solid transparent;              
+          }
+        }
+      }
+    }
+  }
+}
+

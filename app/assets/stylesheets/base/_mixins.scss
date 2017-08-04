@@ -1,0 +1,35 @@
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+@mixin flex-justify-center() {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-align-center() {
+  display: flex;
+  align-items: center;
+}
+
+@mixin bold-black() {
+  color: $black;
+  font-weight: bold;
+}
+
+@mixin desktop-margins() {
+  padding: $desktop-page-top 22px 44px 22px;
+}
+
+@mixin mobile-margins() {
+  padding: $mobile-page-top 22px 44px 22px;
+}
+
+@mixin active-shadow() {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  // box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}

@@ -19,6 +19,8 @@
 }
 
 html, body {
+  height: 100%;
+  background-color: red;
   width: 100%;
   font-size: 18px;
   -webkit-font-smoothing: antialiased;
@@ -26,13 +28,11 @@ html, body {
 }
 
 body {
-  height: 100%;
   color: #333;
-  background-color: #fff;
+  // background-color: #fff;
 }
 
 html {
-  height: 100%;
   font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 3 */
   -webkit-text-size-adjust: 100%; /* 3 */
