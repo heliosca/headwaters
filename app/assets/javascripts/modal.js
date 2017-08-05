@@ -1,6 +1,17 @@
 document.addEventListener("turbolinks:load", function() {
 
   $("#modal-button").click(function() {
+    transitionInDimmer();
+    transitionInModal();
+  });
+
+  $(".modal .deny, #dimmer").click(function() {
+    transitionOutModal();
+    transitionOutDimmer();
+  });
+
+
+  function transitionInModal() {
     $(".modal").css("display", "block");
     $(".modal").removeClass("hidden");
     $(".modal").addClass("animating scale in");
@@ -10,9 +21,21 @@ document.addEventListener("turbolinks:load", function() {
       $(this).addClass("visible active");
       $(".modal").off("animationend");
     });
-  });
+  }
 
-  $(".modal .deny").click(function() {
+  function transitionInDimmer() {
+    $("#dimmer").css("display", "block");
+    $("#dimmer").removeClass("hidden");
+    $("#dimmer").addClass("animating fade in");
+
+    $("#dimmer").on("animationend", function(event) {
+      $(this).removeClass("animating fade in");
+      $(this).addClass("visible active");
+      $("#dimmer").off("animationend");
+    });
+  }
+
+  function transitionOutModal() {
     $(".modal").addClass("animating scale out");
 
     $(".modal").on("animationend", function(event) {
@@ -21,5 +44,16 @@ document.addEventListener("turbolinks:load", function() {
       $(this).addClass("hidden");
       $(".modal").off("animationend");
     });
-  });
+  }
+
+  function transitionOutDimmer() {
+    $("#dimmer").addClass("animating fade out");
+
+    $("#dimmer").on("animationend", function(event) {
+      $("#dimmer").css("display", "");
+      $(this).removeClass("visible active animating fade out");
+      $(this).addClass("hidden");
+      $("#dimmer").off("animationend");
+    });
+  }
 });

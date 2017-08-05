@@ -103,6 +103,17 @@
           -ms-flex-item-align: top;
               align-self: top;
     }
+
+    > .icon + .description,
+    > .image + .description {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 1 auto;
+          -ms-flex: 0 1 auto;
+              flex: 0 1 auto;
+      min-width: '';
+      width: auto;
+      padding-left: 2em;
+    }
   }
 
   > .image.content {
@@ -138,35 +149,20 @@
   &.active {
     display: block;
   }
+
+  > .actions {
+    background: #F9FAFB;
+    padding: 1rem 1rem;
+    border-top: 1px solid rgba(34, 36, 38, 0.15);
+    text-align: right;
+  }
+
+  .actions > .button {
+    margin-left: 0.75em;
+  }
 }
 
 
-
-
-.modal > .content > .icon + .description,
-.modal > .content > .image + .description {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 1 auto;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-  min-width: '';
-  width: auto;
-  padding-left: 2em;
-}
-
-/*--------------
-     Actions
----------------*/
-
-.modal > .actions {
-  background: #F9FAFB;
-  padding: 1rem 1rem;
-  border-top: 1px solid rgba(34, 36, 38, 0.15);
-  text-align: right;
-}
-.modal .actions > .button {
-  margin-left: 0.75em;
-}
 
 /*-------------------
        Responsive
@@ -220,16 +216,16 @@
 /* Mobile */
 @media only screen and (max-width: 767px) {
   .modal > .header {
-    padding: 0.75rem 1rem !important;
-    padding-right: 2.25rem !important;
+    padding: 0.75rem 1rem;
+    padding-right: 2.25rem;
   }
   .modal > .content {
     display: block;
-    padding: 1rem !important;
+    padding: 1rem;
   }
   .modal > .close {
-    top: 0.5rem !important;
-    right: 0.5rem !important;
+    top: 0.5rem;
+    right: 0.5rem;
   }
   /*rtl:ignore*/
   .modal .image.content {
@@ -242,9 +238,9 @@
   .modal .content > .image {
     display: block;
     max-width: 100%;
-    margin: 0em auto !important;
+    margin: 0em auto;
     text-align: center;
-    padding: 0rem 0rem 1rem !important;
+    padding: 0rem 0rem 1rem;
   }
   .modal > .content > .image > i.icon {
     font-size: 5rem;
@@ -253,15 +249,15 @@
   /*rtl:ignore*/
   .modal .content > .description {
     display: block;
-    width: 100% !important;
-    margin: 0em !important;
-    padding: 1rem 0rem !important;
+    width: 100%;
+    margin: 0em;
+    padding: 1rem 0rem;
     box-shadow: none;
   }
   
 /* Let Buttons Stack */
   .modal > .actions {
-    padding: 1rem 1rem 0rem !important;
+    padding: 1rem 1rem 0rem;
   }
   .modal .actions > .buttons,
   .modal .actions > .button {
@@ -286,7 +282,7 @@
   background-color: transparent;
   border: none;
   border-radius: 0em;
-  box-shadow: none !important;
+  box-shadow: none;
   color: #FFFFFF;
 }
 .basic.modal > .header,
@@ -335,8 +331,8 @@
   position: fixed;
 }
 .modals.dimmer .scrolling.modal {
-  position: static !important;
-  margin: 3.5rem auto !important;
+  position: static;
+  margin: 3.5rem auto;
 }
 
 /* undetached scrolling */
@@ -350,7 +346,7 @@
 .scrolling.undetached.dimmable .scrolling.modal {
   position: absolute;
   left: 50%;
-  margin-top: 3.5rem !important;
+  margin-top: 3.5rem;
 }
 
 /* Coupling with Sidebar */
@@ -359,110 +355,10 @@
 }
 @media only screen and (max-width: 991px) {
   .modals.dimmer .scrolling.modal {
-    margin-top: 1rem !important;
-    margin-bottom: 1rem !important;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 }
 
-/*--------------
-   Full Screen
----------------*/
-
-.fullscreen.modal {
-  width: 95% !important;
-  left: 2.5% !important;
-  margin: 1em auto;
-}
-.fullscreen.scrolling.modal {
-  left: 0em !important;
-}
-.fullscreen.modal > .header {
-  padding-right: 2.25rem;
-}
-.fullscreen.modal > .close {
-  top: 1.0535rem;
-  right: 1rem;
-  color: rgba(0, 0, 0, 0.87);
-}
-
-/*--------------
-      Size
----------------*/
-
-.modal {
-  font-size: 1rem;
-}
-
-/* Small */
-.small.modal > .header:not(.ui) {
-  font-size: 1.3em;
-}
-
-/* Small Modal Width */
-@media only screen and (max-width: 767px) {
-  .small.modal {
-    width: 95%;
-    margin: 0em 0em 0em -47.5%;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .small.modal {
-    width: 70.4%;
-    margin: 0em 0em 0em -35.2%;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .small.modal {
-    width: 680px;
-    margin: 0em 0em 0em -340px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .small.modal {
-    width: 720px;
-    margin: 0em 0em 0em -360px;
-  }
-}
-@media only screen and (min-width: 1920px) {
-  .small.modal {
-    width: 760px;
-    margin: 0em 0em 0em -380px;
-  }
-}
-
-/* Large Modal Width */
-.large.modal > .header {
-  font-size: 1.6em;
-}
-@media only screen and (max-width: 767px) {
-  .large.modal {
-    width: 95%;
-    margin: 0em 0em 0em -47.5%;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .large.modal {
-    width: 88%;
-    margin: 0em 0em 0em -44%;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .large.modal {
-    width: 1020px;
-    margin: 0em 0em 0em -510px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .large.modal {
-    width: 1080px;
-    margin: 0em 0em 0em -540px;
-  }
-}
-@media only screen and (min-width: 1920px) {
-  .large.modal {
-    width: 1140px;
-    margin: 0em 0em 0em -570px;
-  }
-}
 
 
