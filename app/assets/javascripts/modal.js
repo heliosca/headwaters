@@ -29,7 +29,7 @@ document.addEventListener("turbolinks:load", function() {
 
     $animationElement.on("animationend", function(event) {
       $animationElement.removeClass("visible active animating " + animation + " out");
-      $animationElement.css("display", "");
+      $animationElement.css("display", "block");
       $animationElement.addClass("hidden");
       $animationElement.off("animationend");
     });

@@ -8,14 +8,9 @@
   background: #FFFFFF;
   border: none;
   box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.2), 1px 3px 15px 2px rgba(0, 0, 0, 0.2);
-  -webkit-transform-origin: 50% 25%;
-      -ms-transform-origin: 50% 25%;
-          transform-origin: 50% 25%;
+  transform-origin: 50% 25%;
   border-radius: 0.28571429rem;
-  -webkit-user-select: text;
-     -moz-user-select: text;
-      -ms-user-select: text;
-          user-select: text;
+  user-select: text;
   will-change: top, left, margin, transform, opacity;
 
   > :first-child:not(.icon),
@@ -74,14 +69,9 @@
 
     > .image {
       display: block;
-      -webkit-box-flex: 0;
-      -webkit-flex: 0 1 auto;
-          -ms-flex: 0 1 auto;
-              flex: 0 1 auto;
+      flex: 0 1 auto;
       width: '';
-      -webkit-align-self: top;
-          -ms-flex-item-align: top;
-              align-self: top;
+      align-self: top;
 
       > i.icon {
         margin: 0em;
@@ -94,22 +84,14 @@
 
     > .description {
       display: block;
-      -webkit-box-flex: 1;
-      -webkit-flex: 1 0 auto;
-          -ms-flex: 1 0 auto;
-              flex: 1 0 auto;
+      flex: 1 0 auto;
       min-width: 0px;
-      -webkit-align-self: top;
-          -ms-flex-item-align: top;
-              align-self: top;
+      align-self: top;
     }
 
     > .icon + .description,
     > .image + .description {
-      -webkit-box-flex: 0;
-      -webkit-flex: 0 1 auto;
-          -ms-flex: 0 1 auto;
-              flex: 0 1 auto;
+      flex: 0 1 auto;
       min-width: '';
       width: auto;
       padding-left: 2em;
@@ -117,33 +99,20 @@
   }
 
   > .image.content {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
   }
 
   > [class*="top aligned"] {
-    -webkit-align-self: top;
-        -ms-flex-item-align: top;
-            align-self: top;
+    align-self: top;
   }
 
   > [class*="middle aligned"] {
-    -webkit-align-self: middle;
-        -ms-flex-item-align: middle;
-            align-self: middle;
+    align-self: middle;
   }
 
   > [class*="stretched"] {
-    -webkit-align-self: stretch;
-        -ms-flex-item-align: stretch;
-            align-self: stretch;
+    align-self: stretch;
   }
 
   &.active {
@@ -311,9 +280,6 @@
   }
 }
 
-
-
-
 /*--------------
     Scrolling
 ---------------*/
@@ -359,6 +325,3 @@
     margin-bottom: 1rem;
   }
 }
-
-
-

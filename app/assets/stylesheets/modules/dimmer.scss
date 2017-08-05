@@ -1,6 +1,7 @@
 .dimmable:not(body) {
   position: relative;
 }
+
 #dimmer {
   display: none;
   position: absolute;
@@ -13,16 +14,10 @@
   background-color: rgba(0, 0, 0, 0.85);
   opacity: 0;
   line-height: 1;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-transition: background-color 0.5s linear;
+  animation-fill-mode: both;
+  animation-duration: 0.5s;
   transition: background-color 0.5s linear;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   will-change: opacity;
   z-index: 1000;
 
@@ -30,10 +25,7 @@
     width: 100%;
     height: 100%;
     display: table;
-    -webkit-user-select: text;
-       -moz-user-select: text;
-        -ms-user-select: text;
-            user-select: text;
+    user-select: text;
 
     > * {
       display: table-cell;
@@ -77,12 +69,9 @@
 
   &.page {
     position: fixed;
-    -webkit-transform-style: '';
-            transform-style: '';
-    -webkit-perspective: 2000px;
-            perspective: 2000px;
-    -webkit-transform-origin: center center;
-            transform-origin: center center;
+    transform-style: '';
+    perspective: 2000px;
+    transform-origin: center center;
   }
 
   &.simple {
@@ -149,16 +138,13 @@ body.dimmable > #dimmer {
 ---------------*/
 
 .blurring.dimmable > :not(.dimmer) {
-  -webkit-filter: blur(0px) grayscale(0);
-          filter: blur(0px) grayscale(0);
-  -webkit-transition: 800ms -webkit-filter ease;
+  filter: blur(0px) grayscale(0);
   transition: 800ms -webkit-filter ease;
   transition: 800ms filter ease;
   transition: 800ms filter ease, 800ms -webkit-filter ease;
 }
 .blurring.dimmed.dimmable > :not(.dimmer) {
-  -webkit-filter: blur(5px) grayscale(0.7);
-          filter: blur(5px) grayscale(0.7);
+  filter: blur(5px) grayscale(0.7);
 }
 
 /* Dimmer Color */
@@ -186,6 +172,3 @@ body.dimmable > #dimmer {
 .dimmed.dimmable > .simple.inverted#dimmer {
   background-color: rgba(255, 255, 255, 0.85);
 }
-
-
-
