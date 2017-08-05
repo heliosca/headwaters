@@ -1,59 +1,37 @@
 document.addEventListener("turbolinks:load", function() {
 
   $("#modal-button").click(function() {
-    transitionInDimmer();
-    transitionInModal();
+    animateIn(".modal", "scale");
+    animateIn("#dimmer", "fade");
   });
 
   $(".modal .deny, #dimmer").click(function() {
-    transitionOutModal();
-    transitionOutDimmer();
+    animateOut(".modal", "scale");
+    animateOut("#dimmer", "fade");
   });
 
+  function animateIn(selector, animation) {
+    var $animationElement = $(selector);
+    $animationElement.css("display", "block");
+    $animationElement.removeClass("hidden");
+    $animationElement.addClass("animating " + animation + " in");
 
-  function transitionInModal() {
-    $(".modal").css("display", "block");
-    $(".modal").removeClass("hidden");
-    $(".modal").addClass("animating scale in");
-
-    $(".modal").on("animationend", function(event) {
-      $(this).removeClass("animating scale in");
-      $(this).addClass("visible active");
-      $(".modal").off("animationend");
+    $animationElement.on("animationend", function(event) {
+      $animationElement.removeClass("animating " + animation + " in");
+      $animationElement.addClass("visible active");
+      $animationElement.off("animationend");
     });
   }
 
-  function transitionInDimmer() {
-    $("#dimmer").css("display", "block");
-    $("#dimmer").removeClass("hidden");
-    $("#dimmer").addClass("animating fade in");
+  function animateOut(selector, animation) {
+    var $animationElement = $(selector);
+    $animationElement.addClass("animating " + animation + " out");
 
-    $("#dimmer").on("animationend", function(event) {
-      $(this).removeClass("animating fade in");
-      $(this).addClass("visible active");
-      $("#dimmer").off("animationend");
-    });
-  }
-
-  function transitionOutModal() {
-    $(".modal").addClass("animating scale out");
-
-    $(".modal").on("animationend", function(event) {
-      $(".modal").css("display", "");
-      $(this).removeClass("visible active animating scale out");
-      $(this).addClass("hidden");
-      $(".modal").off("animationend");
-    });
-  }
-
-  function transitionOutDimmer() {
-    $("#dimmer").addClass("animating fade out");
-
-    $("#dimmer").on("animationend", function(event) {
-      $("#dimmer").css("display", "");
-      $(this).removeClass("visible active animating fade out");
-      $(this).addClass("hidden");
-      $("#dimmer").off("animationend");
+    $animationElement.on("animationend", function(event) {
+      $animationElement.removeClass("visible active animating " + animation + " out");
+      $animationElement.css("display", "");
+      $animationElement.addClass("hidden");
+      $animationElement.off("animationend");
     });
   }
 });
