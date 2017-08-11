@@ -1,0 +1,327 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  top: 50%;
+  left: 50%;
+  text-align: left;
+  background: #FFFFFF;
+  border: none;
+  box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.2), 1px 3px 15px 2px rgba(0, 0, 0, 0.2);
+  transform-origin: 50% 25%;
+  border-radius: 0.28571429rem;
+  user-select: text;
+  will-change: top, left, margin, transform, opacity;
+
+  > :first-child:not(.icon),
+  > .icon:first-child + * {
+    border-top-left-radius: 0.28571429rem;
+    border-top-right-radius: 0.28571429rem;
+  }
+
+  > :last-child {
+    border-bottom-left-radius: 0.28571429rem;
+    border-bottom-right-radius: 0.28571429rem;
+  }
+
+  > .close {
+    cursor: pointer;
+    position: absolute;
+    top: -2.5rem;
+    right: -2.5rem;
+    z-index: 1;
+    opacity: 0.8;
+    font-size: 1.25em;
+    color: #FFFFFF;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0.625rem 0rem 0rem 0rem;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  > .header {
+    display: block;
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background: #FFFFFF;
+    margin: 0em;
+    padding: 1.25rem 1.5rem;
+    box-shadow: none;
+    color: rgba(0, 0, 0, 0.85);
+    border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+
+    &:not(.ui) {
+      font-size: 1.42857143rem;
+      line-height: 1.2857em;
+      font-weight: bold;
+    }
+  }
+
+  > .content {
+    display: block;
+    width: 100%;
+    font-size: 1em;
+    line-height: 1.4;
+    padding: 1.5rem;
+    background: #FFFFFF;
+
+    > .image {
+      display: block;
+      flex: 0 1 auto;
+      width: '';
+      align-self: top;
+
+      > i.icon {
+        margin: 0em;
+        opacity: 1;
+        width: auto;
+        line-height: 1;
+        font-size: 8rem;
+      }
+    }
+
+    > .description {
+      display: block;
+      flex: 1 0 auto;
+      min-width: 0px;
+      align-self: top;
+    }
+
+    > .icon + .description,
+    > .image + .description {
+      flex: 0 1 auto;
+      min-width: '';
+      width: auto;
+      padding-left: 2em;
+    }
+  }
+
+  > .image.content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  > [class*="top aligned"] {
+    align-self: top;
+  }
+
+  > [class*="middle aligned"] {
+    align-self: middle;
+  }
+
+  > [class*="stretched"] {
+    align-self: stretch;
+  }
+
+  &.active {
+    display: block;
+  }
+
+  > .actions {
+    background: #F9FAFB;
+    padding: 1rem 1rem;
+    border-top: 1px solid rgba(34, 36, 38, 0.15);
+    text-align: right;
+  }
+
+  .actions > .button {
+    margin-left: 0.75em;
+  }
+}
+
+
+
+/*-------------------
+       Responsive
+--------------------*/
+
+
+/* Modal Width */
+@media only screen and (max-width: 767px) {
+  .modal {
+    width: 95%;
+    margin: 0em 0em 0em -47.5%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .modal {
+    width: 88%;
+    margin: 0em 0em 0em -44%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .modal {
+    width: 850px;
+    margin: 0em 0em 0em -425px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .modal {
+    width: 900px;
+    margin: 0em 0em 0em -450px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .modal {
+    width: 950px;
+    margin: 0em 0em 0em -475px;
+  }
+}
+
+/* Tablet and Mobile */
+@media only screen and (max-width: 991px) {
+  .modal > .header {
+    padding-right: 2.25rem;
+  }
+  .modal > .close {
+    top: 1.0535rem;
+    right: 1rem;
+    color: rgba(0, 0, 0, 0.87);
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+  .modal > .header {
+    padding: 0.75rem 1rem;
+    padding-right: 2.25rem;
+  }
+  .modal > .content {
+    display: block;
+    padding: 1rem;
+  }
+  .modal > .close {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+  /*rtl:ignore*/
+  .modal .image.content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .modal .content > .image {
+    display: block;
+    max-width: 100%;
+    margin: 0em auto;
+    text-align: center;
+    padding: 0rem 0rem 1rem;
+  }
+  .modal > .content > .image > i.icon {
+    font-size: 5rem;
+    text-align: center;
+  }
+  /*rtl:ignore*/
+  .modal .content > .description {
+    display: block;
+    width: 100%;
+    margin: 0em;
+    padding: 1rem 0rem;
+    box-shadow: none;
+  }
+  
+/* Let Buttons Stack */
+  .modal > .actions {
+    padding: 1rem 1rem 0rem;
+  }
+  .modal .actions > .buttons,
+  .modal .actions > .button {
+    margin-bottom: 1rem;
+  }
+}
+
+/*--------------
+    Coupling
+---------------*/
+
+.inverted.dimmer > .modal {
+  box-shadow: 1px 3px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+/*******************************
+             Types
+*******************************/
+
+.basic.modal {
+  background-color: transparent;
+  border: none;
+  border-radius: 0em;
+  box-shadow: none;
+  color: #FFFFFF;
+}
+.basic.modal > .header,
+.basic.modal > .content,
+.basic.modal > .actions {
+  background-color: transparent;
+}
+.basic.modal > .header {
+  color: #FFFFFF;
+}
+.basic.modal > .close {
+  top: 1rem;
+  right: 1.5rem;
+}
+.inverted.dimmer > .basic.modal {
+  color: rgba(0, 0, 0, 0.87);
+}
+.inverted.dimmer > .basic.modal > .header {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+/* Tablet and Mobile */
+@media only screen and (max-width: 991px) {
+  .basic.modal > .close {
+    color: #FFFFFF;
+  }
+}
+
+/*--------------
+    Scrolling
+---------------*/
+
+
+/* A modal that cannot fit on the page */
+.scrolling.dimmable.dimmed {
+  overflow: hidden;
+}
+.scrolling.dimmable.dimmed > .dimmer {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.scrolling.dimmable > .dimmer {
+  position: fixed;
+}
+.modals.dimmer .scrolling.modal {
+  position: static;
+  margin: 3.5rem auto;
+}
+
+/* undetached scrolling */
+.scrolling.undetached.dimmable.dimmed {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.scrolling.undetached.dimmable.dimmed > .dimmer {
+  overflow: hidden;
+}
+.scrolling.undetached.dimmable .scrolling.modal {
+  position: absolute;
+  left: 50%;
+  margin-top: 3.5rem;
+}
+
+/* Coupling with Sidebar */
+.undetached.dimmable.dimmed > .pusher {
+  z-index: auto;
+}
+@media only screen and (max-width: 991px) {
+  .modals.dimmer .scrolling.modal {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
