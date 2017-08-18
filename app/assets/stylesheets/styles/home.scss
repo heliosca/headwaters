@@ -1,5 +1,6 @@
 h1 {
 	text-align: center;
+	font-family: 'Throhand-Regular-Roman', sans-serif;
 }
 
 .home-text {
@@ -10,4 +11,11 @@ h1 {
   .text-block {
   	padding: 30px;
   }
+}
+
+#subscribe-window {
+	background-color: $light-blue;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }
