@@ -18,7 +18,9 @@ h1 {
 	background-color: $light-blue;
 	position: fixed;
 	bottom: 0;
+	height: 200px;
 	width: 100%;
+	text-align: center;
 
 	.close {
 		cursor: pointer;
