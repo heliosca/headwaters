@@ -14,8 +14,22 @@ h1 {
 }
 
 #subscribe-window {
+	display: none;
 	background-color: $light-blue;
 	position: fixed;
 	bottom: 0;
 	width: 100%;
+
+	.close {
+		cursor: pointer;
+		position: absolute;
+		padding: 10px;
+		top: 5px;
+		right: 5px;
+		border-radius: 5px;
+		border: none;
+		background-color: $white;
+		opacity: 0.4;
+	}
+	    
 }

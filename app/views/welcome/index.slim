@@ -8,9 +8,9 @@ h1 Headwaters bitch
 
 	.text-block Donec eleifend nisi in metus convallis sollicitudin venenatis urna pharetra. Nunc gravida nisi rhoncus lectus porta pellentesque. Mauris ullamcorper, turpis at vulputate vehicula, motherfucker libero turd elit, sit amet rhoncus mauris sem non enim. Nulla iaculis sollicitudin mollis. Aliquam commodo, orci rutrum tristique sagittis, nulla elit lacinia arcu, at dictum quam piss at lacus. Praesent nec metus mi, bollocks ullamcorper neque. In hac habitasse platea dictumst. Sed tempus sagittis magna, vel fuck nibh consequat vitae. In id mi sit amet diam commodo fermentum. Etiam pretium felis sed erat ultricies tempus. Quisque ut lacus urna, ac rutrum turpis. Aenean vehicula, dolor non vestibulum volutpat, diam diam pulvinar enim, quis placerat cunt cumbubble nec enim. Morbi et dolor nisi, eu faucibus sapien. Suspendisse potenti. Proin semper sodales nunc, id venenatis justo condimentum non.
 #subscribe-window
-	button.close CLose this
-
-	form action="<%=  ENV.fetch('MAILCHIMP_SUBSCRIBE_URL') %>" method="post" id="subscribe-form" target="_blank"
+	button.close
+		i.fa.fa-times
+	= form_tag "/subscriptions", id: "subscribe-form" do 
 		h2 Subscribe to our mailing list
-		input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"
-		input type="submit" value="Subscribe" name="subscribe" 
+		= email_field_tag :email
+		= submit_tag "Subscribe"
