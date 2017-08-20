@@ -1,34 +1,51 @@
+var globals = {
+  subscribeShown: false,
+  optedOut: false
+};
+
 document.addEventListener("turbolinks:load", function() {
   var hwCookie = document.cookie.match(/^(.*;)?\s*HeadwatersCaCookie\s*=\s*[^;]+(.*)?$/);
+  if (!hwCookie) {
+    if (!globals.optedOut) {
+      if (!globals.subscribeShown) {
+        setTimeout(function() {
+          $("#subscribe-window").fadeIn(400);
+          globals.subscribeShown = true;
+        }, 1500);
+      } else {
+        $("#subscribe-window").show();
+      }
+    }
 
-  // if (!hwCookie) {
-    setTimeout(function() {
-      $("#subscribe-window").fadeIn(400);
-    }, 1500);
-  // }
+    $("#subscribe-window .close").click(function() {
+      $("#subscribe-window").fadeOut(function() {
+        $("#subscribe-window").remove();
+      });
+      globals.optedOut = true;
+    });
 
-  $("#subscribe-window .close").click(function() {
-    $("#subscribe-window").fadeOut();
-  });
+    $("#subscribe-form").submit(function() {
+      event.preventDefault();
+      console.log($(this).attr('action'));
 
-  $("#subscribe-form").submit(function() {
-    event.preventDefault();
-    console.log($(this).attr('action'));
+      var url = $(this).attr('action'),
+          data = $(this).serialize(),
+          success = subscribeSuccess;
 
-    var url = $(this).attr('action'),
-        data = $(this).serialize(),
-        success = subscribeSuccess;
-
-    $.post(url, data, success);
-  });
+      $.post(url, data, success);
+    });
+  }
 
   function subscribeSuccess(response) {
-    console.log(response);
     $("#subscribe-window").fadeOut();
     setCookie();
   }
 
   function setCookie() {
-    document.cookie = "HeadwatersCaCookie=scrumptious";
+    document.cookie = "HeadwatersCaCookie=scumptious; expires="+dateYearFromNow();
+  }
+
+  function dateYearFromNow() {
+    return new Date(new Date().getTime()+365*24*60*60*1000).toGMTString();
   }
 });

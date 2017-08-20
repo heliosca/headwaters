@@ -3,5 +3,5 @@
 		i.fa.fa-times
 	= form_tag "/subscriptions", id: "subscribe-form" do 
 		h2 Join our mailing list
-		= email_field_tag :email
+		= email_field_tag :email, nil, class: "email"
 		= submit_tag "Subscribe"
