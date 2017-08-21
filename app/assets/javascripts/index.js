@@ -1,8 +1,7 @@
 document.addEventListener("turbolinks:load", function() {
   if (window.location.pathname === "/") {
-    if (!globals.haveCrossFader) {
+    if (!globals.HWcrossFader) {
       globals.HWcrossFader = new crossFader();
-      globals.haveCrossFader = true;
     }
     globals.HWcrossFader.init();
     globals.crossFaderRunning = true;
