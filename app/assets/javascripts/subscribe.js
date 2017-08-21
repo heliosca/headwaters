@@ -1,8 +1,3 @@
-var globals = {
-  subscribeShown: false,
-  optedOut: false
-};
-
 document.addEventListener("turbolinks:load", function() {
   var hwCookie = document.cookie.match(/^(.*;)?\s*HeadwatersCaCookie\s*=\s*[^;]+(.*)?$/);
   if (!hwCookie) {
