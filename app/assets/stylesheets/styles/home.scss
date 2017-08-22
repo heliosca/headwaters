@@ -4,18 +4,43 @@ h1 {
 	font-family: 'Throhand-Regular-Roman', sans-serif;
 }
 
-.home-text {
-	background-color: $cream;
-  width: 80%;
-  margin: 0 auto;
 
-  .text-block {
-  	padding: 30px;
-  }
+
+.body-container {
+	z-index: 55;
+	position: absolute;
+	top: 760px;
+  background-color: rgba(255,255,255, 0.85);
+
+	.home-text {
+		background-color: $cream;
+	  width: 80%;
+	  margin: 0 auto;
+
+	  .text-block {
+	  	padding: 30px;
+	  }
+	}
+
+	.middle-image {
+		margin-bottom: 220px;
+
+		img {
+			z-index: 99;
+			position: absolute;
+	    top: -120px;
+			right: 0;
+			left: 0;
+			margin: 0 auto;
+	    width: 500px;
+		}
+	}
 }
 
+
+
 .about-images {
-  position: relative;
+  position: fixed;
   height: 760px;
   width: 100%;
   overflow: hidden;
