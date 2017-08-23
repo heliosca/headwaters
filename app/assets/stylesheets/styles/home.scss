@@ -62,7 +62,7 @@ h1 {
 	background-color: $light-blue;
 	position: fixed;
 	bottom: 0;
-	height: 200px;
+	padding: 22px;
 	width: 100%;
 	text-align: center;
 	z-index: 99;
@@ -77,40 +77,65 @@ h1 {
 		border: none;
 		background-color: $white;
 		opacity: 0.4;
-	}
+		transition: opacity 0.3s ease;
 
-	h2 {
-		text-transform: uppercase;
-	}
-
-	input {
-		display: block;
-		border-radius: 0.28571429rem;
-		font-size: 1em;
-		margin: 0 auto;
-		padding: 0.35em 0.67861429em;
-	}
-	
-	input[type='email'] {
-		outline: none;
-		tap-highlight-color: rgba(255,255,255,0);
-		line-height: 1.2142em;
-		border: 1px solid rgba(34,36,38,0.15);
-		color: rgba(0,0,0,0.87);
-		box-shadow: 0em 0em 0em 0em transparent inset;
-		transition: color 0.1s ease, border-color 0.1s ease;
-		margin-bottom: 25px;
-
-		&:focus {
-			border: 1px solid $blue;
+		&:hover {
+			opacity: 1;
 		}
 	}
 
-	input[type='submit'] {
-		background-color: $cream;
-		color: $blue;
-		border: none;
-		width: 150px;
-		cursor: pointer;
+	#subscribe-form {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		h2 {
+			text-transform: uppercase;
+			font-family: 'Throhand-Regular-Roman', serif;
+			letter-spacing: 2px;
+			margin-right: 66px;
+		}
+
+		.form-fields {
+
+			input {
+				display: block;
+				font-size: 1em;
+				margin: 0 auto;
+				padding: 0.35em 0.67861429em;
+			}
+			
+			input[type='email'] {
+				border-radius: 0.28571429rem;
+				outline: none;
+				tap-highlight-color: rgba(255,255,255,0);
+				line-height: 1.2142em;
+				border: 1px solid rgba(34,36,38,0.15);
+				color: rgba(0,0,0,0.87);
+				box-shadow: 0em 0em 0em 0em transparent inset;
+				transition: color 0.1s ease, border-color 0.1s ease;
+				margin-bottom: 10px;
+				width: 220px;
+
+				&:focus {
+					border: 1px solid $blue;
+				}
+			}
+
+			input[type='submit'] {
+				text-transform: uppercase;
+				font-weight: bold;
+				background-color: $cream;
+				color: $blue;
+				border: none;
+				width: 170px;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+
+				&:hover {
+					background-color: $white;
+				}
+			}
+		}
 	}
 }
