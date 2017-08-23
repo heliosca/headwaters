@@ -21,8 +21,6 @@
       line-height: 20px;
 
       #nav-logo {
-        opacity: 0.0;
-        transition: opacity 0.3s ease;
         height: 30px;
       }
     }
@@ -74,10 +72,6 @@
   }
 
   &.dropdown-active, &.visible {
-
-    .nav-header .nav-brand #nav-logo {
-      opacity: 1.0;
-    }
 
     #nav-items a {
       color: #222222;
