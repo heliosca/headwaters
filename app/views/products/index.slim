@@ -1,9 +1,11 @@
 .content-wrapper
-	h1 Products
-	- @products.each do | prod |
-		.product-container
-			= image_tag("hw-logo-blue.png")
-			.name name: #{prod.name}
-			.stat strain: #{prod.strain}
-			.stat thc: #{prod.thc}
-			.stat cbd: #{prod.thc}
+	#products-index
+		h1 Products
+		.products-container
+			- @products.each do | prod |
+				.prod
+					= image_tag("https://s3-us-west-1.amazonaws.com/headwatersca/images/IMG_0461.jpg")
+					.name #{prod.name}
+					.stat strain: #{prod.strain}
+					.stat thc: #{prod.thc}
+					.stat cbd: #{prod.thc}
