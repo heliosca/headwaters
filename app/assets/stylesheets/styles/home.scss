@@ -7,7 +7,7 @@ h1 {
 .body-container {
 	z-index: 55;
 	position: absolute;
-	top: 760px;
+	top: 600px;
   background-color: rgba(255,255,255, 0.85);
 
 	.home-text {
@@ -21,16 +21,16 @@ h1 {
 	}
 
 	.middle-image {
-		margin-bottom: 220px;
+		margin-bottom: 120px;
 
 		img {
 			z-index: 99;
 			position: absolute;
-	    top: -120px;
+	    top: -60px;
 			right: 0;
 			left: 0;
 			margin: 0 auto;
-	    width: 500px;
+	    width: 220px;
 		}
 	}
 }
@@ -70,7 +70,6 @@ h1 {
 	.close {
 		cursor: pointer;
 		position: absolute;
-		padding: 10px;
 		top: 5px;
 		right: 5px;
 		border-radius: 5px;
@@ -87,16 +86,20 @@ h1 {
 	#subscribe-form {
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		flex-direction: column;
+		justify-content: space-evenly;
 
 		h2 {
 			text-transform: uppercase;
 			font-family: 'Throhand-Regular-Roman', serif;
 			letter-spacing: 2px;
-			margin-right: 66px;
+			margin: 0 0 11px 0;
+			font-size: 12px;
 		}
 
 		.form-fields {
+			display: flex;
+			align-items: center;
 
 			input {
 				display: block;
@@ -114,27 +117,86 @@ h1 {
 				color: rgba(0,0,0,0.87);
 				box-shadow: 0em 0em 0em 0em transparent inset;
 				transition: color 0.1s ease, border-color 0.1s ease;
-				margin-bottom: 10px;
-				width: 220px;
+				width: 180px;
+				margin-right: 11px;
 
 				&:focus {
 					border: 1px solid $blue;
 				}
 			}
 
-			input[type='submit'] {
+			input[type='submit'], button[type='submit'] {
 				text-transform: uppercase;
 				font-weight: bold;
 				background-color: $cream;
 				color: $blue;
 				border: none;
-				width: 170px;
 				cursor: pointer;
 				transition: background-color 0.3s ease;
+				padding: 0.6em 1.2em 0.6em;
+
+				&:not(.mobile-button) {
+					display: none;
+				}
 
 				&:hover {
 					background-color: $white;
 				}
+			}
+		}
+	}
+
+	@media #{$tablet-small} {
+		.close {
+			padding: 10px;
+		}
+
+		#subscribe-form {
+			flex-direction: row;
+
+			h2 {
+				font-size: 22px;
+
+				margin-bottom: 0;
+			}
+
+			.form-fields {
+
+				input[type='submit'], button[type='submit'] {
+					margin-right: 25px;
+					width: 220px;
+
+					&:not(.mobile-button) {
+						display: block;
+					}
+
+					&.mobile-button {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media #{$tablet-small} {
+	.body-container {
+		top: 760px;
+
+		.home-text {
+
+		  .text-block {
+
+		  }
+		}
+
+		.middle-image {
+			margin-bottom: 220px;
+
+			img {
+				top: -120px;
+		    width: 450px;
 			}
 		}
 	}
