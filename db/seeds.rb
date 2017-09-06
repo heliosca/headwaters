@@ -9,7 +9,7 @@
 10.times do 
 
 	Product.create(
-		{ type: 'flower',
+		{ product_type: 'flower',
 			name: Faker::BossaNova.song,
 			thc: Faker::Number.decimal(2, 3),
 			cbd: Faker::Number.decimal(2, 3),
@@ -23,7 +23,7 @@ end
 10.times do 
 
 	Product.create(
-		{ type: 'vape',
+		{ product_type: 'vape',
 			name: Faker::BossaNova.song,
 			thc: Faker::Number.decimal(2, 3),
 			cbd: Faker::Number.decimal(2, 3),

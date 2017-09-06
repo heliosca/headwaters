@@ -4,7 +4,7 @@ class CreateProducts < ActiveRecord::Migration[5.0]
     	t.string :thc
     	t.string :cbd
     	t.string :strain
-    	t.string :type
+    	t.string :product_type
         t.text :description
     	t.string :name
 
