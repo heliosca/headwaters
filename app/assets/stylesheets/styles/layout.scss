@@ -24,10 +24,13 @@ html {
 }
 
 .content-wrapper {
-  margin-top: $mobile-nav-height;
+  padding: 22px;
+  margin-top: calc(#{$mobile-nav-height} + 22px);
 
   @media #{$tablet-medium} {
-    margin-top: $desktop-nav-height;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: calc(#{$desktop-nav-height} + 22px);
   }
 }
 

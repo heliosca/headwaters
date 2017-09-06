@@ -7,29 +7,25 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 10.times do 
-
-	Product.create(
-		{ product_type: 'flower',
-			name: Faker::BossaNova.song,
-			thc: Faker::Number.decimal(2, 3),
-			cbd: Faker::Number.decimal(2, 3),
-			strain: Faker::Coffee.blend_name,
-			description: Faker::Hipster.sentences(3),
-		 } 
-	)
-
+	Product.create({ 
+		product_type: 'flower',
+		name: Faker::BossaNova.song,
+		thc: Faker::Number.decimal(2, 3),
+		cbd: Faker::Number.decimal(2, 3),
+		price: Faker::Number(4),
+		strain: Faker::Coffee.blend_name,
+		description: Faker::Hipster.sentences(3)
+	})
 end
 
 10.times do 
-
-	Product.create(
-		{ product_type: 'vape',
-			name: Faker::BossaNova.song,
-			thc: Faker::Number.decimal(2, 3),
-			cbd: Faker::Number.decimal(2, 3),
-			strain: Faker::Coffee.blend_name,
-			description: Faker::Hipster.sentences(3),
-		 }
-	)
-
+	Product.create({ 
+		product_type: 'vape',
+		name: Faker::BossaNova.song,
+		thc: Faker::Number.decimal(2, 3),
+		cbd: Faker::Number.decimal(2, 3),
+		price: Faker::Number(4),
+		strain: Faker::Coffee.blend_name,
+		description: Faker::Hipster.sentences(3)
+	})
 end

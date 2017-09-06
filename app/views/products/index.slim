@@ -1,2 +1,9 @@
 .content-wrapper
 	h1 Products
+	- @products.each do | prod |
+		.product-container
+			= image_tag("hw-logo-blue.png")
+			.name name: #{prod.name}
+			.stat strain: #{prod.strain}
+			.stat thc: #{prod.thc}
+			.stat cbd: #{prod.thc}
