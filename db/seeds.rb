@@ -6,4 +6,30 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Product.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+10.times do 
+
+	Product.create(
+		{ type: 'flower',
+			name: Faker::BossaNova.song,
+			thc: Faker::Number.decimal(2, 3),
+			cbd: Faker::Number.decimal(2, 3),
+			strain: Faker::Coffee.blend_name,
+			description: Faker::Hipster.sentences(3),
+		 } 
+	)
+
+end
+
+10.times do 
+
+	Product.create(
+		{ type: 'vape',
+			name: Faker::BossaNova.song,
+			thc: Faker::Number.decimal(2, 3),
+			cbd: Faker::Number.decimal(2, 3),
+			strain: Faker::Coffee.blend_name,
+			description: Faker::Hipster.sentences(3),
+		 }
+	)
+
+end

@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20170906181625) do
     t.string   "strain"
     t.string   "type"
     t.text     "description"
+    t.string   "name"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

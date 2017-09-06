@@ -5,7 +5,8 @@ class CreateProducts < ActiveRecord::Migration[5.0]
     	t.string :cbd
     	t.string :strain
     	t.string :type
-    	t.text :description
+        t.text :description
+    	t.string :name
 
     	t.timestamps null: false
     end
