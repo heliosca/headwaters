@@ -27,7 +27,7 @@ document.addEventListener("turbolinks:load", function() {
     toggleNavVisibility();
   }
 
-  $("#mobile-nav").click(function() {
+  $("#mobile-nav").click(function() {   /// add resize listener to remove 'dropdown-active'
     $nav.toggleClass("dropdown-active");
   });
 });

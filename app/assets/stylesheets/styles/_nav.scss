@@ -1,7 +1,7 @@
 #nav-bar {
   border: none;
   transition: all 0.3s ease;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.75);
   position: fixed;
   width: 100%;
   top: 0;
@@ -60,7 +60,7 @@
       text-transform: uppercase;
       display: block;
       font-size: 16px;
-      color: white;
+      color: #222222;
       transition: color 0.3s ease;
       padding: 15px 0 15px 20px;
       width: 100%;
@@ -68,13 +68,6 @@
       &:hover, &.active {
         font-weight: bold;
       }
-    }
-  }
-
-  &.dropdown-active, &.visible {
-
-    #nav-items a {
-      color: #222222;
     }
   }
 
@@ -116,12 +109,15 @@
       right: 20px;
       top: 50%;
       transform: translateY(-50%); 
-      border-top: none;
       
       a {
         display: inline;
         padding: 5px 15px;
       }
+    }
+
+    &.dropdown-active #nav-items {
+      border-top: none;
     }
   }
 }
