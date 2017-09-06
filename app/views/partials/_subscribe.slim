@@ -3,5 +3,8 @@
 		i.fa.fa-times
 	= form_tag "/subscriptions", id: "subscribe-form" do 
 		h2 Join our mailing list
-		= email_field_tag :email, nil, class: "email"
-		= submit_tag "Subscribe"
+		.form-fields
+			= email_field_tag :email, nil, placeholder: "email", class: "email"
+			= button_tag "Subscribe", type: "Submit", class: "basic-button"
+			= button_tag "", type: "submit", class: "basic-button mobile-button" do 
+				= fa_icon "arrow-right"

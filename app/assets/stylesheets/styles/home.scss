@@ -7,7 +7,7 @@ h1 {
 .body-container {
 	z-index: 55;
 	position: absolute;
-	top: 760px;
+	top: 600px;
   background-color: rgba(255,255,255, 0.85);
 
 	.home-text {
@@ -21,16 +21,16 @@ h1 {
 	}
 
 	.middle-image {
-		margin-bottom: 220px;
+		margin-bottom: 120px;
 
 		img {
 			z-index: 99;
 			position: absolute;
-	    top: -120px;
+	    top: -60px;
 			right: 0;
 			left: 0;
 			margin: 0 auto;
-	    width: 500px;
+	    width: 220px;
 		}
 	}
 }
@@ -62,7 +62,7 @@ h1 {
 	background-color: $light-blue;
 	position: fixed;
 	bottom: 0;
-	height: 200px;
+	padding: 22px;
 	width: 100%;
 	text-align: center;
 	z-index: 99;
@@ -70,47 +70,134 @@ h1 {
 	.close {
 		cursor: pointer;
 		position: absolute;
-		padding: 10px;
 		top: 5px;
 		right: 5px;
 		border-radius: 5px;
 		border: none;
 		background-color: $white;
 		opacity: 0.4;
-	}
+		transition: opacity 0.3s ease;
 
-	h2 {
-		text-transform: uppercase;
-	}
-
-	input {
-		display: block;
-		border-radius: 0.28571429rem;
-		font-size: 1em;
-		margin: 0 auto;
-		padding: 0.35em 0.67861429em;
-	}
-	
-	input[type='email'] {
-		outline: none;
-		tap-highlight-color: rgba(255,255,255,0);
-		line-height: 1.2142em;
-		border: 1px solid rgba(34,36,38,0.15);
-		color: rgba(0,0,0,0.87);
-		box-shadow: 0em 0em 0em 0em transparent inset;
-		transition: color 0.1s ease, border-color 0.1s ease;
-		margin-bottom: 25px;
-
-		&:focus {
-			border: 1px solid $blue;
+		&:hover {
+			opacity: 1;
 		}
 	}
 
-	input[type='submit'] {
-		background-color: $cream;
-		color: $blue;
-		border: none;
-		width: 150px;
-		cursor: pointer;
+	#subscribe-form {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: space-evenly;
+
+		h2 {
+			text-transform: uppercase;
+			font-family: 'Throhand-Regular-Roman', serif;
+			letter-spacing: 2px;
+			margin: 0 0 11px 0;
+			font-size: 12px;
+		}
+
+		.form-fields {
+			display: flex;
+			align-items: center;
+
+			input {
+				display: block;
+				font-size: 1em;
+				margin: 0 auto;
+				padding: 0.35em 0.67861429em;
+			}
+			
+			input[type='email'] {
+				border-radius: 0.28571429rem;
+				outline: none;
+				tap-highlight-color: rgba(255,255,255,0);
+				line-height: 1.2142em;
+				border: 1px solid rgba(34,36,38,0.15);
+				color: rgba(0,0,0,0.87);
+				box-shadow: 0em 0em 0em 0em transparent inset;
+				transition: color 0.1s ease, border-color 0.1s ease;
+				width: 180px;
+				margin-right: 11px;
+
+				&:focus {
+					border: 1px solid $blue;
+				}
+			}
+
+			input[type='submit'], button[type='submit'] {
+				text-transform: uppercase;
+				font-weight: bold;
+				background-color: $cream;
+				color: $blue;
+				border: none;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+				padding: 0.6em 1.2em 0.6em;
+
+				&:not(.mobile-button) {
+					display: none;
+				}
+
+				&:hover {
+					background-color: $white;
+				}
+			}
+		}
+	}
+
+	@media #{$tablet-small} {
+		.close {
+			padding: 10px;
+		}
+
+		#subscribe-form {
+			flex-direction: row;
+
+			h2 {
+				font-size: 22px;
+
+				margin-bottom: 0;
+			}
+
+			.form-fields {
+
+				input[type='submit'], button[type='submit'] {
+					margin-right: 25px;
+					width: 220px;
+
+					&:not(.mobile-button) {
+						display: block;
+					}
+
+					&.mobile-button {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@media #{$tablet-small} {
+	.body-container {
+		top: 760px;
+
+		.home-text {
+
+		  .text-block {
+
+		  }
+		}
+
+		.middle-image {
+			margin-bottom: 220px;
+
+			img {
+				top: -120px;
+		    width: 450px;
+			}
+		}
 	}
 }

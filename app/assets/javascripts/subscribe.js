@@ -37,10 +37,6 @@ document.addEventListener("turbolinks:load", function() {
   }
 
   function setCookie() {
-    document.cookie = "HeadwatersCaCookie=scumptious; expires="+dateYearFromNow();
-  }
-
-  function dateYearFromNow() {
-    return new Date(new Date().getTime()+365*24*60*60*1000).toGMTString();
+    document.cookie = "HeadwatersCaCookie=scumptious; expires="+globals.dateYearFromNow();
   }
 });
