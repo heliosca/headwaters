@@ -23,6 +23,17 @@ html {
   -webkit-text-size-adjust: 100%; /* 3 */
 }
 
+.content-wrapper {
+  padding: 22px;
+  margin-top: calc(#{$mobile-nav-height} + 22px);
+
+  @media #{$tablet-medium} {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: calc(#{$desktop-nav-height} + 22px);
+  }
+}
+
 * {
   box-sizing: border-box;
 }
