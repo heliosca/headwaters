@@ -1,10 +1,10 @@
 nav#nav-bar
 	.nav-header
 		a.nav-brand href="/"
-			= image_tag("hw-logo-blue.png", id: "nav-logo")
+			= image_tag("hw-long-logo.png", id: "nav-logo")
 		button#mobile-nav
 			i.fa.fa-bars
 	#nav-items
-		= link_to "Practices", static_path(:practices)
+		= link_to "Our Practices", static_path(:practices)
 		= link_to "Products", products_path
-		= link_to "1% Give Back", static_path(:contact)
+		= link_to "1% Give Back", static_path("give-back")
