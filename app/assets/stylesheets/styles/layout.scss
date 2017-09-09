@@ -8,12 +8,12 @@ html, body {
   font-size: 18px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Antenna-Regular', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 body {
   color: #333;
-  height: 2000px;
+  // height: 2000px;
   // background-color: #fff;
 }
 
@@ -26,6 +26,11 @@ html {
 .content-wrapper {
   padding: 22px;
   margin-top: calc(#{$mobile-nav-height} + 22px);
+
+  h1 {
+    font-family: 'Throhand-Regular-Roman', serif;
+    text-align: center;
+  }
 
   @media #{$tablet-medium} {
     max-width: 1200px;
