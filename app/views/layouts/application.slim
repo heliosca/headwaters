@@ -20,4 +20,4 @@ html
 
     = render 'partials/subscribe'
     = render 'partials/age_verification'
-    = render 'footer'
+    = render 'footer' unless current_page?(root_path)

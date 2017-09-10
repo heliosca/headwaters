@@ -1,0 +1,76 @@
+#footer  {
+	background-color: $navy;
+	padding: 33px 0 11px 0;
+	color: white;
+	position: relative;
+
+	img {
+		display: none;
+		height: 50px;
+		position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+		left: 10px;
+	}
+
+	.connect{
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 22px;
+
+		span {
+	    background: $white;
+	    color: $navy;
+	    width: 36px;
+	    height: 36px;
+	    display: table;
+	    text-align: center;
+	    border-radius: 300px;
+	    transition: color 0.35s ease, background 0.35s ease;
+	    cursor: pointer;
+
+	    i {
+	    	color: $navy;
+	    	display: table-cell;
+  	    font-size: 20px;
+        vertical-align: middle;
+	    }
+
+	    &:hover {
+	    	background: $light-blue;
+
+	    	i {
+		    	color: $white;
+		    }
+	    }
+		}
+
+    a {
+    	color: $white;
+    	transition: color 0.3s ease;
+
+    	&:hover {
+    		color: $light-blue;
+    	}
+
+    	&:first-child {
+    		margin-bottom: 11px;
+    	}
+    }
+	}
+
+	.copyright {
+		text-align: center;
+		font-size: 12px;
+		color: $white;
+	}
+
+	@media #{$tablet-small} {
+
+		img {
+			display: block;
+		}
+	}
+}
