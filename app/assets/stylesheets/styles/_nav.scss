@@ -12,13 +12,15 @@
   height: $mobile-nav-height;
   @include clearfix;
 
+
   .nav-header {
 
     .nav-brand {
       float: left;
-      padding: 15px 15px;
-      font-size: 18px;
-      line-height: 20px;
+      margin-left: 11px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
 
       #nav-logo {
         height: 30px;
@@ -64,6 +66,7 @@
       transition: color 0.3s ease;
       padding: 15px 0 15px 20px;
       width: 100%;
+      font-family: 'Antenna-Regular', sans-serif;
 
       &:hover, &.active {
         font-weight: bold;
@@ -92,8 +95,12 @@
 
     .nav-header {
 
-      .nav-brand #nav-logo {
-        height: 45px;
+      .nav-brand {
+        margin-left: 20px;
+
+        #nav-logo {
+          height: 55px;
+        }
       }
 
       #mobile-nav {

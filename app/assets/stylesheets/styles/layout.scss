@@ -8,13 +8,11 @@ html, body {
   font-size: 18px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Antenna-Regular', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 body {
   color: #333;
-  height: 2000px;
-  // background-color: #fff;
 }
 
 html {
@@ -25,12 +23,20 @@ html {
 
 .content-wrapper {
   padding: 22px;
-  margin-top: calc(#{$mobile-nav-height} + 22px);
+  padding-top: $mobile-nav-height;
+  min-height: 100%;
+
+  h1 {
+    font-family: 'Throhand-Regular-Roman', serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
 
   @media #{$tablet-medium} {
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: calc(#{$desktop-nav-height} + 22px);
+    margin-top: $desktop-nav-height;
   }
 }
 
