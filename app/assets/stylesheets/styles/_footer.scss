@@ -4,21 +4,11 @@
 	color: white;
 	position: relative;
 
-	// img {
-	// 	display: none;
-	// 	height: 50px;
-	// 	position: absolute;
- //    top: 50%;
- //    transform: translateY(-50%);
-	// 	left: 10px;
-	// }
-
 	.content-container {
 		display: flex;
-		justify-content: space-evenly;
+		flex-direction: column;
 		align-items: center;
 		margin: 0 auto 22px auto;
-		width: 500px;
 
 		a {
 			color: $white;
@@ -34,9 +24,13 @@
 			}
 		}
 
-		.contact a {
-			text-transform: uppercase;
-			font-size: 24px;
+		.contact {
+			margin-bottom: 22px;
+
+			a {
+				text-transform: uppercase;
+				font-size: 24px;
+			}
 		}
 
 		.connect{
@@ -72,8 +66,6 @@
 		}
 	}
 
-	
-
 	.copyright {
 		text-align: center;
 		font-size: 12px;
@@ -82,8 +74,14 @@
 
 	@media #{$tablet-small} {
 
-		// img {
-		// 	display: block;
-		// }
+		.content-container {
+			justify-content: space-evenly;
+			flex-direction: row;
+			width: 550px;
+
+			.contact {
+				margin: 0;
+			}
+		}
 	}
 }
