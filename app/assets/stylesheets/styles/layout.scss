@@ -30,19 +30,7 @@ html {
     height: 300px;
     position: relative;
 
-    hr {
-      border-top: 1px solid $white;
-      width: 25%;
-      top: 45%;
-
-      &:first-of-type {
-        left: 7%;
-      }
-
-      &:last-of-type {
-        right: 7%;
-      }
-    }
+   
 
     hr, h1 {
       position: absolute;
@@ -62,14 +50,41 @@ html {
   h1 {
     font-family: 'Throhand-Regular-Roman', serif;
     text-align: center;
-    text-transform: uppercase;
     letter-spacing: 4px;
+    font-size: 32px;
+  }
+
+  @media #{$tablet-small} {
+
+    h1 {
+      font-size: 48px;
+    }
+
+    hr {
+      border-top: 1px solid $white;
+      width: 25%;
+      top: 45%;
+
+      &:first-of-type {
+        left: 7%;
+      }
+
+      &:last-of-type {
+        right: 7%;
+      }
+    }
+
+
   }
 
   @media #{$tablet-medium} {
     max-width: 1200px;
     margin: 0 auto;
     padding-top: calc(#{$desktop-nav-height} + 22px);
+
+    h1 {
+      font-size: 64px;
+    }
   }
 }
 
