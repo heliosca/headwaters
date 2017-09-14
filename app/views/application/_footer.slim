@@ -1,7 +1,16 @@
 #footer
-	= image_tag("hw-logo-blue.png")
-	.connect
-		= link_to "https://www.instagram.com/headwaters_ca", target: "_blank" do
-			span = fa_icon("instagram 3x")
-		= link_to "Contact Us", static_path(:contact)
-	.copyright ©2017 Headwaters, Inc.
+	.content-container
+		.contact
+		  = link_to "Contact Us", static_path(:contact)
+		.connect
+			= link_to "https://www.instagram.com/headwaters_ca", target: "_blank" do
+				span = fa_icon("instagram 3x")
+			= link_to "https://www.facebook.com", target: "_blank" do
+				span = fa_icon("facebook 3x")
+			= link_to "https://www.eaze.com", target: "_blank" do
+				= image_tag("eaze.png")
+	.copyright Headwaters 2017
+	.warning WARNING: This product contains a chemical known to the State of California to cause cancer, birth defects, and other reproductive harm.
+	
+
+

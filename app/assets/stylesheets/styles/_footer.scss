@@ -1,67 +1,76 @@
 #footer  {
 	background-color: $navy;
-	padding: 33px 0 11px 0;
+	padding: 33px 0 22px 0;
 	color: white;
 	position: relative;
 
-	img {
-		display: none;
-		height: 50px;
-		position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-		left: 10px;
-	}
-
-	.connect{
+	.content-container {
 		display: flex;
-		justify-content: center;
 		flex-direction: column;
 		align-items: center;
-		margin-bottom: 22px;
+		margin: 0 auto 33px auto;
 
-		span {
-	    background: $white;
-	    color: $navy;
-	    width: 36px;
-	    height: 36px;
-	    display: table;
-	    text-align: center;
-	    border-radius: 300px;
-	    transition: color 0.35s ease, background 0.35s ease;
-	    cursor: pointer;
+		a {
+			color: $white;
+			transition: color 0.3s ease;
 
-	    i {
-	    	color: $navy;
-	    	display: table-cell;
-  	    font-size: 20px;
-        vertical-align: middle;
-	    }
+			&:hover {
+				color: $light-blue;
+			}
 
-	    &:hover {
-	    	background: $light-blue;
-
-	    	i {
-		    	color: $white;
-		    }
-	    }
+			&:last-child {
+				display: flex;
+				align-items: center;
+			}
 		}
 
-    a {
-    	color: $white;
-    	transition: color 0.3s ease;
+		.contact {
+			margin-bottom: 22px;
 
-    	&:hover {
-    		color: $light-blue;
-    	}
+			a {
+				text-transform: uppercase;
+				font-size: 24px;
+			}
+		}
 
-    	&:first-child {
-    		margin-bottom: 11px;
-    	}
-    }
+		.connect{
+			display: flex;
+
+			img {
+				width: 50px;
+			}
+
+			span {
+		    background: $light-blue;
+		    color: $white;
+		    width: 36px;
+		    height: 36px;
+		    display: table;
+		    text-align: center;
+		    border-radius: 5px;
+		    transition: color 0.35s ease, background 0.35s ease;
+		    cursor: pointer;
+		    margin-right: 22px;
+
+		    i {
+		    	display: table-cell;
+	  	    font-size: 20px;
+	        vertical-align: middle;
+		    }
+
+		    &:hover {
+		    	background: $white;
+		    	color: $navy;
+		    }
+			}
+		}
 	}
 
 	.copyright {
+		margin-bottom: 7px;
+	}
+
+	.copyright, .warning {
 		text-align: center;
 		font-size: 12px;
 		color: $white;
@@ -69,8 +78,14 @@
 
 	@media #{$tablet-small} {
 
-		img {
-			display: block;
+		.content-container {
+			justify-content: space-evenly;
+			flex-direction: row;
+			width: 550px;
+
+			.contact {
+				margin: 0;
+			}
 		}
 	}
 }
