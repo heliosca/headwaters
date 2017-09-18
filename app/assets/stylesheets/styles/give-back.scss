@@ -1,5 +1,47 @@
 #give-back {
 	.hero { 
 		background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://s3-us-west-1.amazonaws.com/headwatersca/images/Headwaters-14.jpg');
+		background-position: center;
+		margin-bottom: 22px;
+	}
+
+	.section {
+		background-color: $light-gray;
+		display: flex;
+		align-items: center;
+
+		&:first-child  {
+			padding-bottom: 22px;
+		}
+
+		img {
+			width: 50%;
+		}
+
+		.text-container {
+			padding: 44px;
+			color: black;
+			font-size: 22px;
+
+			span {
+				font-size: 22px;
+				font-weight: bold;
+			}
+
+			div:first-child {
+				margin-bottom: 22px;
+			}
+
+			div:last-child {
+				margin-top: 22px;
+			}
+
+			.bullet {
+				text-align: center;
+				text-transform: uppercase;
+				font-size: 28px;
+				margin-top: 11px;
+			}
+		}
 	}
 }

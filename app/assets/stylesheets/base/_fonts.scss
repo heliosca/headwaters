@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url(https://fonts.googleapis.com/css?family=Oxygen);
 
 @font-face {
   font-family: 'Antenna-Regular';
@@ -14,7 +15,7 @@
 @font-face {
   font-family: 'Antenna-Black';
   src: font-url('Antenna-Black.eot');
-  src: font-url('Antenna-Black.ttf') format('truetype');
+  src: font-url('Antenna-Black.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 };
@@ -22,7 +23,7 @@
 @font-face {
   font-family: 'Antenna-Medium';
   src: font-url('Antenna-Medium.eot');
-  src: font-url('Antenna-Medium.ttf') format('truetype');
+  src: font-url('Antenna-Medium.otf') format('otf');
   font-weight: normal;
   font-style: normal;
 };
