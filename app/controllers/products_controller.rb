@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
 	def index
-		@products = Product.all
+		@flowers = Product.where(product_type: "flower")
+		@vapes = Product.where(product_type: "vape")
 	end
 end

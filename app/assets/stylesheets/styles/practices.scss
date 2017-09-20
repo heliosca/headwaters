@@ -2,7 +2,8 @@
 	max-width: none;
 
 	.content-container { 
-		background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://s3-us-west-1.amazonaws.com/headwatersca/images/_MG_8270.jpg');
+		background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('https://s3-us-west-1.amazonaws.com/headwatersca/images/_MG_8270.jpg');
+		background-size: cover;
 
 		.quadrant-container {
 			border-top: 1px solid $white; 
@@ -10,32 +11,30 @@
 			flex-wrap: wrap;
 			
 			.quadrant {
-				width: 50%;
-				padding: 144px;
+				padding: 22px 11px;
+				border-bottom: 1px solid $white;
+				width: 100%;
 				color: $white;
 				position: relative;
 
 				.header {
+					display: none;
 					text-align: center;
 					font-weight: bold;
 				}
 
 				.overlay {
+					background-color: transparent;
 					height: 100%;
 					width: 100%;
-					opacity: 0;
-					padding: 44px;
-					top: 0;
-					left: 0;
-					position: absolute;
-					background: $light-gray;
-					color: $black;
-					transition: opacity 0.5s ease;
+					padding: 22px 11px;
+					color: $white;
 					display: flex;
 					justify-content: center;
 					align-items: center;
 
 					.header {
+						display: block;
 						margin-bottom: 22px;
 					}
 
@@ -53,20 +52,75 @@
 							margin-bottom: 0;
 						}
 					}
+
+					&:last-child {
+						border-bottom: none;
+					}
 			  }
+			}
+		}
+	}
 
-				&:nth-child(odd) {
-					border-right: 1px solid $white;
-				}
+	@media #{$tablet-small} {
 
-				&:nth-child(1), &:nth-child(2) {
-					border-bottom: 1px solid $white;
-				}
+		.content-container .quadrant-container .quadrant {
+			padding: 44px;
+		}
+	}
 
-				&:hover .overlay {
-					opacity: 1;
+	@media #{$desktop-small} {
+		.content-container {
+			.quadrant-container {
+
+				.quadrant {
+					border-bottom: none;
+					width: 50%;
+					padding: 144px;
+
+					.header {
+						display: block;
+						transition: opacity 0.5s ease;
+					}
+
+					.overlay {
+						visibility: hidden;
+						opacity: 0;
+						padding: 44px;
+						background-color: $white;
+						color: $black;
+						top: 0;
+						left: 0;
+						position: absolute;
+						transition: opacity 0.5s ease, background-color 0.5s ease;
+					}
+
+					&:hover {
+
+						.header {
+							opacity: 0;
+						}
+
+						.overlay {
+							visibility: visible;
+							opacity: 1;
+							background-color: rgba(255,255,255,0.8);
+
+							.header {
+								opacity: 1;
+							}
+						}
+					}
+					
+					&:nth-child(odd) {
+						border-right: 1px solid $white;
+					}
+
+					&:nth-child(1), &:nth-child(2) {
+						border-bottom: 1px solid $white;
+					}
 				}
 			}
 		}
+
 	}
 }
