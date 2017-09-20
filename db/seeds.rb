@@ -12,7 +12,7 @@
 		name: Faker::BossaNova.song,
 		thc: Faker::Number.decimal(2, 3),
 		cbd: Faker::Number.decimal(2, 3),
-		price: Faker::Number(4),
+		price: Faker::Number.number(2),
 		strain: Faker::Coffee.blend_name,
 		description: Faker::Hipster.sentences(3)
 	})
@@ -24,7 +24,7 @@ end
 		name: Faker::BossaNova.song,
 		thc: Faker::Number.decimal(2, 3),
 		cbd: Faker::Number.decimal(2, 3),
-		price: Faker::Number(4),
+		price: Faker::Number.number(2),
 		strain: Faker::Coffee.blend_name,
 		description: Faker::Hipster.sentences(3)
 	})
