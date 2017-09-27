@@ -1,6 +1,7 @@
 #home-container {
 
 	.body-container {
+		width: 100%;
 		z-index: 55;
 		position: absolute;
 		top: 600px;
@@ -8,11 +9,12 @@
 	  padding: 80px 0;
 
 		.home-text {
-		  width: 80%;
+		  max-width: 800px;
 		  margin: 0 auto;
 
 		  .text-block {
 		  	padding: 30px;
+		  	font-size: 22px;
 		  }
 		}
 
