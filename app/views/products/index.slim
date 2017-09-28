@@ -6,36 +6,34 @@
   .products-container
     .prod-hero.flower
       h2 flower
-    .cards-container	
-      - (0..5).each do | i |
-        .prod-card
-          = image_tag("https://s3-us-west-1.amazonaws.com/headwatersca/images/IMG_0461.jpg")
-          .info-container
-	          .name #{@flowers[i].name}
-	          .stat-container
-	            .stat strain:
-	            .value #{@flowers[i].strain}
-	          .stat-container
-	            .stat cbd:
-	            .value #{@flowers[i].cbd}
-	          .stat-container
-	            .stat thc:
-	            .value #{@flowers[i].thc}
+    - (0..5).each do | i |
+      .prod-card
+        = image_tag("https://s3-us-west-1.amazonaws.com/headwatersca/images/IMG_0461.jpg")
+        .info-container
+          .name #{@flowers[i].name}
+          .stat-container
+            .stat strain:
+            .value #{@flowers[i].strain}
+          .stat-container
+            .stat cbd:
+            .value #{@flowers[i].cbd}
+          .stat-container
+            .stat thc:
+            .value #{@flowers[i].thc}
   .products-container
     .prod-hero.vape
       h2 vape
-    .cards-container	
-      - (0..5).each do | i |
-        .prod-card
-          = image_tag("https://s3-us-west-1.amazonaws.com/headwatersca/images/IMG_0461.jpg")
-          .info-container
-	          .name #{@vapes[i].name}
-	          .stat-container
-	            .stat strain:
-	            .value #{@vapes[i].strain}
-	          .stat-container
-	            .stat cbd:
-	            .value #{@vapes[i].cbd}
-	          .stat-container
-	            .stat thc:
-	            .value #{@vapes[i].thc}	            
+    - (0..5).each do | i |
+      .prod-card
+        = image_tag("https://s3-us-west-1.amazonaws.com/headwatersca/images/IMG_0461.jpg")
+        .info-container
+          .name #{@vapes[i].name}
+          .stat-container
+            .stat strain:
+            .value #{@vapes[i].strain}
+          .stat-container
+            .stat cbd:
+            .value #{@vapes[i].cbd}
+          .stat-container
+            .stat thc:
+            .value #{@vapes[i].thc}	            

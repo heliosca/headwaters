@@ -7,11 +7,13 @@
 
 	.products-container {
 		display: flex;
+        justify-content: space-between;
+		flex-wrap: wrap;
 
     .prod-hero {
     	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://s3-us-west-1.amazonaws.com/headwatersca/images/Headwaters-52.jpg');
     	height: 300px;
-    	width: 100%;
+    	width: 40%;
     	background-size: cover;
     	background-position: center;
     	position: relative;
@@ -39,50 +41,43 @@
     	}
     }
 
-    .cards-container {
-    	display: flex;
-    	flex-wrap: wrap;
-	    justify-content: space-evenly;
-	    align-items: flex-start;
+    .prod-card {
+    	overflow: hidden;
+    	border-radius: 4px;
+    	width: 21%;
+    	margin-bottom: 44px;
+    	box-shadow: 0 1px 3px rgba(0,0,0,.3);
 
-	    .prod-card {
-	    	overflow: hidden;
-	    	border-radius: 4px;
-	    	width: 38%;
-	    	margin-bottom: 44px;
-	    	box-shadow: 0 1px 3px rgba(0,0,0,.3);
+    	img {
+    		height: 200px;
+    		display: block;
+    	}
 
-	    	img {
-	    		height: 200px;
-	    		display: block;
-	    	}
+    	.info-container {
+    		padding: 22px 11px;
+    		background-color: $gray;
 
-	    	.info-container {
-	    		padding: 22px 11px;
-	    		background-color: $gray;
+    		.name {
+    			text-align: center;
+    			font-weight: bold;
+    			margin-bottom: 11px;
+    		}
 
-	    		.name {
-	    			text-align: center;
-	    			font-weight: bold;
-	    			margin-bottom: 11px;
-	    		}
+    		.stat-container {
+					display: flex;
+					margin-bottom: 5px;
 
-	    		.stat-container {
-						display: flex;
-						margin-bottom: 5px;
+					.stat {
+						text-transform: capitalize;
+						font-weight: bold;
+						width: 25%;
+					}
 
-						.stat {
-							text-transform: capitalize;
-							font-weight: bold;
-							margin-right: 5px ;
-						}
-
-						&:last-child {
-							margin-bottom: 0;
-						}
-	    		}
-	    	}
-	    }
+					&:last-child {
+						margin-bottom: 0;
+					}
+    		}
+    	}
     }
 	}
 }
