@@ -12,7 +12,6 @@
   height: $mobile-nav-height;
   @include clearfix;
 
-
   .nav-header {
 
     .nav-brand {
@@ -66,7 +65,6 @@
       transition: color 0.3s ease;
       padding: 15px 0 15px 20px;
       width: 100%;
-      font-family: 'Antenna-Regular', sans-serif;
 
       &:hover, &.active {
         font-weight: bold;

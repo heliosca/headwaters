@@ -29,11 +29,8 @@ html {
     height: 150px;
     position: relative;
 
-    hr, h1 {
-      position: absolute;
-    }
-
     h1 {
+      position: absolute;
       color: $white;
       margin: 0;
       left: 0;
@@ -60,20 +57,6 @@ html {
     h1 {
       font-size: 48px;
     }
-
-    hr {
-      border-top: 1px solid $white;
-      width: 25%;
-      top: 45%;
-
-      &:first-of-type {
-        left: 7%;
-      }
-
-      &:last-of-type {
-        right: 7%;
-      }
-    }
   }
 
   @media #{$tablet-medium} {
@@ -84,9 +67,8 @@ html {
       height: 300px;
     }
 
-
     h1 {
-      font-size: 64px;
+      font-size: 72px;
     }
   }
 }
