@@ -20,9 +20,16 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+
+      div {
+        display: none;
+      }
 
       #nav-logo {
         height: 45px;
+        margin-right: 12px;
       }
     }
 
@@ -65,7 +72,7 @@
       transition: color 0.3s ease;
       padding: 15px 0 15px 20px;
       width: 100%;
-
+      
       &:hover, &.active {
         font-weight: bold;
       }
@@ -85,6 +92,17 @@
       overflow: scroll;
       -webkit-overflow-scrolling: touch;
       border-top: 1px solid #e7e7e7;
+    }
+  }
+
+  @media #{$tablet-small} {
+    .nav-header .nav-brand div {
+      display: block;
+      font-family: 'Throhand-Regular-Roman', serif;
+      letter-spacing: 5px;
+      color: $black;
+      font-size: 32px;
+      margin-top: 4px;
     }
   }
 

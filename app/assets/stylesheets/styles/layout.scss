@@ -13,6 +13,7 @@ html, body {
 
 body {
   color: $black;
+  background-color: $black;
 }
 
 html {
@@ -24,6 +25,7 @@ html {
 .content-wrapper {
   padding: calc(#{$mobile-nav-height} + 22px) 11px 22px 11px;
   min-height: 100%;
+  background-color: $medium-gray;
 
   .hero {
     height: 150px;
