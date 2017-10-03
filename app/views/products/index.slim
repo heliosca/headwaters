@@ -20,12 +20,10 @@
       #vape.products-container
         - (0..5).each do | i |
           .column
-            .prod-card
+            = link_to product_path(@vapes[i]), class: "prod-card" do
               .image-container
                 .overlay
                 = image_tag("https://s3-us-west-1.amazonaws.com/headwatersca/images/IMG_0461.jpg")
               .info-container
                 .name #{@vapes[i].name}
-                .stat-container
-                  .stat strain:
-                  .value #{@vapes[i].strain}        
+                .benefits #{@vapes[i].strain} 
