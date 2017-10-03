@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171003022912) do
+ActiveRecord::Schema.define(version: 20171003065255) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "farms", force: :cascade do |t|
+    t.string   "name"
+    t.string   "state"
+    t.string   "location"
+    t.string   "website"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "products", force: :cascade do |t|
     t.string   "thc"
@@ -27,6 +36,9 @@ ActiveRecord::Schema.define(version: 20171003022912) do
     t.datetime "updated_at",   null: false
     t.string   "weed_type"
     t.text     "benefits"
+    t.string   "flavor"
+    t.integer  "farm_id"
+    t.index ["farm_id"], name: "index_products_on_farm_id", using: :btree
   end
 
 end
