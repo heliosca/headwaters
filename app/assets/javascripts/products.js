@@ -8,7 +8,7 @@ document.addEventListener("turbolinks:load", function() {
         $(this).addClass("active");
         target = $(this).data("target");
         $(".products-container").hide();
-        $(target).css("display", "flex")
+        $(target).css("display", "flex");
       }
       
     });

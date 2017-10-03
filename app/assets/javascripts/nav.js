@@ -2,7 +2,8 @@ document.addEventListener("turbolinks:load", function() {
 
   var pageTitle = window.location.pathname,
       $nav = $("#nav-bar"),
-      navVisible = false;
+      navVisible = false,
+      cannaVisible = true;
 
   $('a[href="'+pageTitle+'"]').addClass("active");
 
@@ -20,6 +21,22 @@ document.addEventListener("turbolinks:load", function() {
       } else {
         if (navVisible) {
           toggleNavVisibility();
+        }
+      }
+
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        if (cannaVisible) {
+          $("#concious-cannabis").fadeOut(200, function() {
+            cannaVisible = false;
+          });
+          
+        }
+      } else if (document.body.scrollTop <= 300 || document.documentElement.scrollTop <= 300) {
+        if (!cannaVisible) {
+          $("#concious-cannabis").fadeIn(200, function() {
+            cannaVisible = true;
+          });
+          
         }
       }
     });
