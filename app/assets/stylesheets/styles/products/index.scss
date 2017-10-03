@@ -9,13 +9,13 @@
     background-color: $white;
 
     .menu {
-      padding: 22px 0;
+      padding: 11px 0;
       display: flex;
       justify-content: center;
 
       .item {
-        padding: 0 22px;
-        font-size: 28px;
+        padding: 0 11px;
+        font-size: 20px;
         cursor: pointer;
 
         &:hover, &.active {
@@ -32,8 +32,7 @@
     .column {
       display: inline-block;
       padding: 11px;
-      margin-bottom: 44px;
-      width: 25%;
+      width: 50%;
 
      .prod-card {
         overflow: hidden;
@@ -41,8 +40,8 @@
         color: $black;
 
         .image-container {
-          height: 300px;
-          width: 200px;
+          height: 150px;
+          width: 80%;
           margin: 0 auto 22px auto;
           position: relative;
 
@@ -71,19 +70,57 @@
             margin-bottom: 11px;
           }
         }
-
-        &:hover {
-          cursor: pointer;
-
-          .image-container .overlay {
-            opacity: 0.2;
-          }
-        }
       }
     }
 	}
 
   @media #{$tablet-small} {
 
+    .content-container {
+
+      .menu {
+        padding: 22px 0;
+
+        .item {
+          padding: 0 22px;
+          font-size: 28px;
+        }
+      }
+    }
+
+    .products-container {
+
+      .column {
+        margin-bottom: 22px;
+        width: 33.33%;
+
+       .prod-card {
+
+          .image-container {
+            height: 300px;
+            width: 200px;
+          }
+
+          &:hover {
+            cursor: pointer;
+
+            .image-container .overlay {
+              opacity: 0.2;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media #{$tablet-medium} {
+
+    .products-container {
+
+      .column {
+        margin-bottom: 44px;
+        width: 25%;
+      }
+    }
   }
 }
