@@ -9,7 +9,7 @@
       #flower.products-container
         - @flowers.each do | flower |
           .column
-            .prod-card
+            = link_to product_path(flower), class: "prod-card" do
               .image-container
                 .overlay
                 = image_tag("https://s3-us-west-1.amazonaws.com/headwatersca/images/IMG_0461.jpg")
