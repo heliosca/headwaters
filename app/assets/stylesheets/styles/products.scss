@@ -1,83 +1,85 @@
 #products-index {
 	.hero {
-		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://s3-us-west-1.amazonaws.com/headwatersca/images/Headwaters-52.jpg');
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://s3-us-west-1.amazonaws.com/headwatersca/images/products.jpg');
 		background-size: cover;
-		margin-bottom: 22px;
 	}
 
-	.products-container {
-		display: flex;
-        justify-content: space-between;
-		flex-wrap: wrap;
+  .content-container {
+    padding: 22px 11px;
+    background-color: $white;
 
-    .prod-hero {
-    	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://s3-us-west-1.amazonaws.com/headwatersca/images/Headwaters-52.jpg');
-    	height: 300px;
-    	width: 40%;
-    	background-size: cover;
-    	background-position: center;
-    	position: relative;
+    .menu {
+      padding: 22px 0;
+      display: flex;
+      justify-content: center;
 
-    	&.flower {
-    		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://s3-us-west-1.amazonaws.com/headwatersca/images/IMG_0601.jpg');
-    	}
+      .item {
+        padding: 0 22px;
+        font-size: 28px;
+        cursor: pointer;
 
-    	&.vape {
-    		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://s3-us-west-1.amazonaws.com/headwatersca/images/Headwaters-52.jpg');
-    	}
-
-    	h2 {
-    		font-size: 48px;
-    		text-align: center;
-    		letter-spacing: 4px;
-    		position: absolute;
-    	  color: $white;
-    	  margin: 0;
-    	  left: 0;
-    	  right: 0;
-    	  font-family: 'Throhand-Regular-Roman';
-    	  top: 50%;
-    	  transform: translateY(-50%);
-    	}
+        &:hover, &.active {
+          font-weight: bold;
+        }
+      }
     }
+  }
 
-    .prod-card {
-    	overflow: hidden;
-    	border-radius: 4px;
-    	width: 21%;
-    	margin-bottom: 44px;
-    	box-shadow: 0 1px 3px rgba(0,0,0,.3);
+	.products-container {
+    display: flex;
+    flex-wrap: wrap;
 
-    	img {
-    		height: 200px;
-    		display: block;
-    	}
+    .column {
+      display: inline-block;
+      padding: 11px;
+      margin-bottom: 44px;
+      width: 25%;
 
-    	.info-container {
-    		padding: 22px 11px;
-    		background-color: $gray;
+     .prod-card {
+        overflow: hidden;
+        padding: 22px 11px;
+        color: $black;
 
-    		.name {
-    			text-align: center;
-    			font-weight: bold;
-    			margin-bottom: 11px;
-    		}
+        .image-container {
+          height: 300px;
+          width: 200px;
+          margin: 0 auto 22px auto;
+          position: relative;
 
-    		.stat-container {
-					display: flex;
-					margin-bottom: 5px;
+          .overlay {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $white;
+            transition: opacity 0.3s ease;
+          }
 
-					.stat {
-						text-transform: capitalize;
-						font-weight: bold;
-						width: 25%;
-					}
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
 
-					&:last-child {
-						margin-bottom: 0;
-					}
-    		}
-    	}
+        .info-container {
+          text-align: center;
+
+          .name {
+            font-weight: bold;
+            margin-bottom: 11px;
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+
+          .image-container .overlay {
+            opacity: 0.2;
+          }
+        }
+      }
     }
 	}
 }

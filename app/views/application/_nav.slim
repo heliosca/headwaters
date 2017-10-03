@@ -1,10 +1,11 @@
 nav#nav-bar
 	.nav-header
 		a.nav-brand href="/"
-			= image_tag("hw-long-logo.svg", id: "nav-logo")
+			= image_tag("hw-w-bw-box.svg", id: "nav-logo")
+			div.header-text HEADWATERS
 		button#mobile-nav
 			i.fa.fa-bars
 	#nav-items
-		= link_to "Our Practices", static_path(:practices)
+		= link_to "Practices", static_path(:practices)
 		= link_to "Products", products_path
 		= link_to "1% Give Back", static_path("give-back")

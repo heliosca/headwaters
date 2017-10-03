@@ -8,11 +8,12 @@ html, body {
   font-size: 18px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Verlag-Book', sans-serif;
 }
 
 body {
   color: $black;
+  background-color: $black;
 }
 
 html {
@@ -24,16 +25,15 @@ html {
 .content-wrapper {
   padding: calc(#{$mobile-nav-height} + 22px) 11px 22px 11px;
   min-height: 100%;
+  background-color: $light-gray;
 
   .hero {
     height: 150px;
     position: relative;
 
-    hr, h1 {
-      position: absolute;
-    }
-
     h1 {
+      text-transform: uppercase;
+      position: absolute;
       color: $white;
       margin: 0;
       left: 0;
@@ -46,7 +46,7 @@ html {
   h1 {
     font-family: 'Throhand-Regular-Roman', serif;
     text-align: center;
-    letter-spacing: 4px;
+    letter-spacing: 6px;
     font-size: 32px;
   }
 
@@ -60,20 +60,6 @@ html {
     h1 {
       font-size: 48px;
     }
-
-    hr {
-      border-top: 1px solid $white;
-      width: 25%;
-      top: 45%;
-
-      &:first-of-type {
-        left: 7%;
-      }
-
-      &:last-of-type {
-        right: 7%;
-      }
-    }
   }
 
   @media #{$tablet-medium} {
@@ -84,9 +70,8 @@ html {
       height: 300px;
     }
 
-
     h1 {
-      font-size: 64px;
+      font-size: 55px;
     }
   }
 }
