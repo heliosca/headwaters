@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170928170056) do
+ActiveRecord::Schema.define(version: 20171003022912) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20170928170056) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "weed_type"
+    t.text     "benefits"
   end
 
 end
