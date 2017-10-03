@@ -3,9 +3,9 @@
       h1 products
     .content-container
       .menu
-        .item.active ALL
-        .item FLOWER
-        .item VAPE
+        #all-button.item.active data-target=".products-container" ALL
+        #flower-button.item data-target="#flower" FLOWER
+        #vape-button.item data-target="#vape" VAPE
       #flower.products-container
         - @flowers.each do | flower |
           .column
@@ -15,9 +15,7 @@
                 = image_tag("https://s3-us-west-1.amazonaws.com/headwatersca/images/IMG_0461.jpg")
               .info-container
                 .name #{flower.name} (#{flower.weed_type.capitalize})
-                .stat-container
-                  .stat strain:
-                  .value #{flower.strain}
+                .benefits #{flower.benefits.humanize}
               
       #vape.products-container
         - (0..5).each do | i |

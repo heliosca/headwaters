@@ -1,6 +1,6 @@
 #products-index {
 	.hero {
-		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://s3-us-west-1.amazonaws.com/headwatersca/images/Headwaters-52.jpg');
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://s3-us-west-1.amazonaws.com/headwatersca/images/products.jpg');
 		background-size: cover;
 	}
 
@@ -26,6 +26,8 @@
   }
 
 	.products-container {
+    display: flex;
+    flex-wrap: wrap;
 
     .column {
       display: inline-block;
@@ -61,26 +63,11 @@
         }
 
         .info-container {
+          text-align: center;
 
           .name {
-            text-align: center;
             font-weight: bold;
             margin-bottom: 11px;
-          }
-
-          .stat-container {
-            display: flex;
-            margin-bottom: 5px;
-
-            .stat {
-              text-transform: capitalize;
-              font-weight: bold;
-              width: 25%;
-            }
-
-            &:last-child {
-                margin-bottom: 0;
-            }
           }
         }
 
