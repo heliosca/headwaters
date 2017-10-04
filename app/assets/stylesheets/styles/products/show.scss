@@ -1,24 +1,30 @@
 #products-show {
 
 	.content {
+		padding: 33px;
+		background-color: $white;
 		display: flex;
-		justify-content: space-around;
+		flex-wrap: wrap;
 
 		.image-container {
 			position: relative;
-			width: 42%;
-
+			max-width: 500px;
+			width: 100%;
+			margin: 0 auto 33px auto;
+			
 			img {
-				position: absolute;
-				margin: auto;
-				top: 50%;
-				transform: translateY(-50%);
+				display: block;
 				width: 100%;
+				margin: auto;
 			}
 		}
 
 		.text-container {
-			width: 42%;
+			width: 100%;
+
+			.name, .benefits {
+				text-align: center;
+			}
 
 			.name {
 				font-size: 48px;
@@ -48,6 +54,27 @@
 
 			.farm-container {
 	      margin-top: 33px;
+			}
+		}
+	}
+
+	@media #{$tablet-medium} {
+		.content {
+			justify-content: space-around;
+
+			.image-container {
+				margin-bottom: 0;
+				width: 42%;
+
+				img {
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+			}
+			
+			.text-container {
+				width: 42%;
 			}
 		}
 	}
