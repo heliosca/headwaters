@@ -1,20 +1,22 @@
 #home-container
   .about-images
-	  img.active src="https://s3-us-west-1.amazonaws.com/headwatersca/images/surf.jpg"
-	  img src="https://s3-us-west-1.amazonaws.com/headwatersca/images/IMG_0461.jpg"
-	  img src="https://s3-us-west-1.amazonaws.com/headwatersca/images/unnamed.jpg"
-	  img src="https://s3-us-west-1.amazonaws.com/headwatersca/images/Headwaters-75.jpg"
-	  img src="https://s3-us-west-1.amazonaws.com/headwatersca/images/IMG_0621.jpg"
-	  img src="https://s3-us-west-1.amazonaws.com/headwatersca/images/beach.jpg"
+	  = image_tag(hw_image_url("surf.jpg"), class: "active")
+	  = image_tag(hw_image_url("IMG_0461.jpg"))
+	  = image_tag(hw_image_url("unnamed.jpg"))
+	  = image_tag(hw_image_url("Headwaters-75.jpg"))
+	  = image_tag(hw_image_url("IMG_0621.jpg"))
+	  = image_tag(hw_image_url("beach.jpg"))
 	  
   .gradient
+  .gradient-two
   #concious-cannabis
-		h1 concious cannabis...
+		h1 concious cannabis
   .body-container
-		.middle-image
-			= image_tag("waterdrop-blue.png")
-		#concious-consumer
-		  h2 ...for the concious consumer
-		.home-text
-			.text-block Headwaters sources 100% clean, compliant cannabis from California farmers that are doing it right: growing in the sun, respecting the watershed and forgoing pesticides. 
-			.text-block The roots of Headwaters run deep. Originally the land of 19th century wunderkind botanist Albert Etter, founding farmer Tristan Strauss built the central Headwaters farm with his own hands in the dirt. Since then, the farm has blossomed into a thriving agricultural operation that’s guided by the principles of sustainability and a deep commitment to community. From compost teas to rainwater catchment systems, the Headwaters way is all about working in concert with the environment.
+    .panel
+			.middle-image
+				= image_tag("waterdrop-blue.png")
+			#concious-consumer
+			  h2 ...for the concious consumer
+			.home-text
+				.text-block Headwaters sources 100% clean, compliant cannabis from California farmers that are doing it right: growing in the sun, respecting the watershed and forgoing pesticides. 
+				.text-block The roots of Headwaters run deep. Originally the land of 19th century wunderkind botanist Albert Etter, founding farmer Tristan Strauss built the central Headwaters farm with his own hands in the dirt. Since then, the farm has blossomed into a thriving agricultural operation that’s guided by the principles of sustainability and a deep commitment to community. From compost teas to rainwater catchment systems, the Headwaters way is all about working in concert with the environment.

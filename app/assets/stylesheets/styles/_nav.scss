@@ -69,12 +69,13 @@
       display: block;
       font-size: 18px;
       color: #222222;
-      transition: color 0.3s ease;
+      transition: color 0.3s ease, border 0.3s ease, background-color 0.3s ease;
       padding: 15px 0 15px 20px;
       width: 100%;
       
       &:hover, &.active {
         font-weight: bold;
+        background-color: $light-gray;
       }
     }
   }
@@ -92,11 +93,16 @@
       overflow: scroll;
       -webkit-overflow-scrolling: touch;
       border-top: 1px solid #e7e7e7;
+
+      a {
+        border-bottom: 1px solid #e7e7e7;
+      }
     }
   }
 
   @media #{$tablet-small} {
     .nav-header .nav-brand div {
+      font-weight: bold;
       display: block;
       font-family: 'Throhand-Regular-Roman', serif;
       letter-spacing: 5px;
@@ -136,6 +142,11 @@
       a {
         display: inline;
         padding: 5px 15px;
+
+        &:hover, &.active {
+          font-weight: bold;
+          background-color: inherit;
+        }
       }
     }
 

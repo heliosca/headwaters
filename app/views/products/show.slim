@@ -1,4 +1,18 @@
-.content-wrapper
-	h1 prod show
-	= @product.name
-	= @product.farm.name
+#products-show.content-wrapper
+  .content
+	  .image-container
+	    = image_tag(hw_image_url("IMG_0461.jpg"))
+	  .text-container
+	    .name=@product.name
+	    .benefits=@product.benefits.humanize
+	    p.description=@product.description
+	    .stat-container
+	      .stat Strain:
+	      .value=@product.weed_type.titleize
+	    .stat-container
+	      .stat Flavor profile:
+	      .value =@product.flavor.titleize
+	    .farm-container
+	      .farm-name #{@product.farm.name.titleize} - #{@product.farm.location.titleize}, CA
+	      - if @product.farm.website
+	        =link_to @product.farm.website, @product.farm.website, class: "shitter"

@@ -77,10 +77,10 @@
 				.quadrant {
 					border-bottom: none;
 					width: 50%;
-				padding: 144px 44px;
+					padding: 144px 44px;
 
 					.header {
-						font-size: 28px;
+						font-size: 32px;
 						display: block;
 						transition: opacity 0.5s ease;
 					}
@@ -95,6 +95,14 @@
 						left: 0;
 						position: absolute;
 						transition: opacity 0.5s ease, background-color 0.5s ease;
+
+						.header {
+							font-size: 28px;
+						}
+
+						.body {
+							font-size: 22px;
+						}
 					}
 
 					&:hover {

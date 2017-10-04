@@ -1,4 +1,5 @@
 #products-index.content-wrapper
+  .content
     .hero
       h1 products
     .content-container
@@ -12,7 +13,7 @@
             = link_to product_path(flower), class: "prod-card" do
               .image-container
                 .overlay
-                = image_tag("https://s3-us-west-1.amazonaws.com/headwatersca/images/IMG_0461.jpg")
+                = image_tag(hw_image_url("IMG_0461.jpg"))
               .info-container
                 .name #{flower.name} (#{flower.weed_type.capitalize})
                 .benefits #{flower.benefits.humanize}
@@ -23,7 +24,7 @@
             = link_to product_path(@vapes[i]), class: "prod-card" do
               .image-container
                 .overlay
-                = image_tag("https://s3-us-west-1.amazonaws.com/headwatersca/images/IMG_0461.jpg")
+                = image_tag(hw_image_url("IMG_0461.jpg"))
               .info-container
                 .name #{@vapes[i].name}
                 .benefits #{@vapes[i].strain} 
