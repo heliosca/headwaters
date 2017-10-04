@@ -1,0 +1,54 @@
+#products-show {
+
+	.content {
+		display: flex;
+		justify-content: space-around;
+
+		.image-container {
+			position: relative;
+			width: 42%;
+
+			img {
+				position: absolute;
+				margin: auto;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 100%;
+			}
+		}
+
+		.text-container {
+			width: 42%;
+
+			.name {
+				font-size: 48px;
+				font-weight: bold;
+				margin-bottom: 11px;
+			}
+
+			.benefits {
+				font-size: 24px;
+				font-style: italic;
+				margin-bottom: 33px;
+			}
+
+			.description {
+				margin-bottom: 33px;
+			}
+
+			.stat-container {
+				display: flex;
+				font-size: 20px;
+
+				.stat {
+					margin-right: 20px;
+					font-weight: bold;
+				}
+			}
+
+			.farm-container {
+	      margin-top: 33px;
+			}
+		}
+	}
+}
