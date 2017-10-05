@@ -1,5 +1,5 @@
 #footer  {
-	background-color: $navy;
+	background-color: $dark-gray;
 	padding: 33px 22px 22px 22px;
 	color: white;
 	position: relative;
@@ -11,11 +11,11 @@
 		margin: 0 auto 33px auto;
 
 		a {
-			color: $white;
+			color: $navy;
 			transition: color 0.3s ease;
 
 			&:hover {
-				color: $light-blue;
+				color: $white;
 			}
 
 			&:last-child {
@@ -41,7 +41,7 @@
 			}
 
 			span {
-		    background: $light-blue;
+		    background: $navy;
 		    color: $white;
 		    width: 36px;
 		    height: 36px;
@@ -68,12 +68,17 @@
 
 	.copyright {
 		margin-bottom: 7px;
+		color: $white;
+	}
+
+	.warning {
+    color: $navy;
 	}
 
 	.copyright, .warning {
 		text-align: center;
 		font-size: 12px;
-		color: $white;
+		// color: $navy;
 	}
 
 	@media #{$tablet-small} {
