@@ -1,37 +1,14 @@
 #home-container {
 
-	.gradient, .gradient-two, .about-images, #concious-cannabis {
+	.gradient, .about-images, #concious-cannabis {
 		position: fixed;
-	}
-
-	.gradient-two {
-		background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-		width: 100%;
-		top: 0;
-		height: 760px;
 	}
 	
 	.gradient {
-		background: linear-gradient(rgba(255,255,255,0), rgb(0,0,0));
+		background: linear-gradient(rgba(255,255,255,0), $black);
 		width: 100%;
 		top: 400px;
 		height: 360px;
-	}
-
-	#concious-cannabis {
-		top: 150px;
-		left: 0;
-		right: 0;
-		margin: auto;
-		color: $white;
-    font-family: 'Throhand-Regular-Roman';
-    font-size: 32px;
-    text-align: center;
-    letter-spacing: 10px;
-
-    h1 {
-    	margin: 0;
-    }
 	}
 
 	.about-images {
@@ -73,33 +50,53 @@
   		  margin: 0 auto;
 
   		  .text-block {
-  		  	font-size: 22px;
+  		  	font-size: 18px;
 
   		  	&:first-of-type {
 						margin-bottom: 22px;
   		  	}
   		  }
+
+  		  .button-container {
+          text-align: center;
+
+  		  	a {
+  		  		margin-top: 44px;
+	  		  	text-transform: uppercase;
+						font-weight: bold;
+						background-color: $black;
+						color: $white;
+						transition: opacity 0.3s ease;
+						padding: 1.2em;
+
+						&:hover {
+							opacity: 0.8;
+						}
+	  		  }
+  		  } 
   		}
 
-  		h2 {
-  	    font-family: 'Throhand-Regular-Roman';
-  	    font-size: 32px;
-  	    text-align: center;
-  	    letter-spacing: 5px;
-  	    color: $navy;
-  	    line-height: 1.8;
-  		}
+  		.droplet {
+  			text-align: center;
 
-  		.middle-image {
-  			
+  			h1, img {
+					position: absolute;
+					right: 0;
+					left: 0;
+					margin: 0 auto;
+  			}
+
+  			h1 {
+  				text-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  				top: -90px;
+					color: $white;
+			    font-family: 'Throhand-Regular-Roman';
+			    font-size: 32px;
+			    letter-spacing: 10px;
+  			}
 
   			img {
-  				z-index: 99;
-  				position: absolute;
-  		    top: -120px;
-  				right: 0;
-  				left: 0;
-  				margin: 0 auto;
+  				top: -200px;
   		    width: 200px;
   			}
   		}
@@ -107,49 +104,39 @@
 	}
 
 	@media #{$tablet-small} {
-		#concious-cannabis {
-			top: 200px;
-	    font-size: 38px;
-		}
-
+		
 		.body-container {
 			top: 760px;
 
 			.panel {
-				padding: 90px 44px;
+				padding: 50px 44px;
+
+				.home-text .text-block {
+		      font-size: 22px;
+				}
 
 				h2 {
 			    font-size: 32px;
 			    letter-spacing: 5px;
 		      line-height: inherit;
 				}
-
-				.middle-image img {
-					top: -150px;
-			    width: 250px;
-				}
 			}
 		}
 	}
 
 	@media #{$tablet-medium} {
-		#concious-cannabis {
-			top: 200px;
-	    font-size: 58px;
-		}
 
 		.body-container {
       border-radius: 5px;
 
     	.panel {
+    		border-radius: 5px;
+    		.droplet {
 
-    		h2 {
-    	    font-size: 48px;
-    		}
-
-    		.middle-image img {
-    			top: -150px;
-    	    width: 250px;
+    			h1 {
+    				top: -110px;
+    		    font-size: 64px;
+    			}
     		}
     	}
 		}
