@@ -2,7 +2,7 @@
 	max-width: none;
 
 	.content-container { 
-		background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('https://s3-us-west-1.amazonaws.com/headwatersca/images/_MG_8270.jpg');
+		@include hero-background('_MG_8270');
 		background-size: cover;
 
 		.quadrant-container {

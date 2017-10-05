@@ -7,10 +7,10 @@
 	    .benefits=@product.benefits.humanize
 	    p.description=@product.description
 	    .stat-container
-	      .stat Strain:
+	      .stat Type:
 	      .value=@product.weed_type.titleize
 	    .stat-container
-	      .stat Flavor profile:
+	      .stat Flavor:
 	      .value =@product.flavor.titleize
 	    .farm-container
 	      .farm-name #{@product.farm.name.titleize} - #{@product.farm.location.titleize}, CA
