@@ -47,7 +47,7 @@
 				font-size: 20px;
 
 				.stat {
-					margin-right: 20px;
+					margin-right: 5px;
 					font-weight: bold;
 				}
 			}
@@ -75,6 +75,10 @@
 			
 			.text-container {
 				width: 42%;
+
+				.name, .benefits {
+					text-align: left;
+				}
 			}
 		}
 	}

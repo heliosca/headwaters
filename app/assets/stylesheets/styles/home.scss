@@ -51,9 +51,10 @@
 
   		  .text-block {
   		  	font-size: 18px;
+  		  	margin-bottom: 22px;
 
-  		  	&:first-of-type {
-						margin-bottom: 22px;
+  		  	&:last-of-type {
+						margin: 0;
   		  	}
   		  }
 
@@ -176,7 +177,7 @@
 
 		h2 {
 			text-transform: uppercase;
-			font-family: 'Throhand-Regular-Roman', serif;
+			font-family: $throhand, serif;
 			letter-spacing: 2px;
 			margin: 0 0 11px 0;
 			font-size: 12px;
@@ -194,6 +195,7 @@
 			}
 			
 			input[type='email'] {
+				font-family: $verlag;
 				border-radius: 0.28571429rem;
 				outline: none;
 				tap-highlight-color: rgba(255,255,255,0);
@@ -206,11 +208,12 @@
 				margin-right: 11px;
 
 				&:focus {
-					border: 1px solid $blue;
+					border: 1px solid $navy;
 				}
 			}
 
 			input[type='submit'], button[type='submit'] {
+				font-family: $verlag;
 				text-transform: uppercase;
 				font-weight: bold;
 				background-color: $black;
@@ -222,10 +225,6 @@
 
 				&:not(.mobile-button) {
 					display: none;
-				}
-
-				&:hover {
-					box-shadow: $white;
 				}
 			}
 		}
@@ -259,6 +258,14 @@
 
 					&.mobile-button {
 						display: none;
+					}
+				}
+
+				button[type='submit'] {
+					transition: opacity 0.3s ease;
+
+					&:hover {
+   					opacity: 0.8;
 					}
 				}
 			}
