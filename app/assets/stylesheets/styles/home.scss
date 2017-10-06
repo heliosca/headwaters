@@ -1,18 +1,8 @@
 #home-container {
 
-	.gradient, .about-images, #concious-cannabis {
-		position: fixed;
-	}
-	
-	.gradient {
-		background: linear-gradient(rgba(0, 0, 0, 0), $black);
-		width: 100%;
-		top: 400px;
-		height: 360px;
-	}
-
 	.about-images {
-		height: 760px;
+		position: fixed;
+		height: 100%;
 		top: 0;
 	  width: 100%;
 	  overflow: hidden;
@@ -35,7 +25,7 @@
 	.body-container {
 		z-index: 55;
 		position: absolute;
-		top: 600px;
+		top: 90%;
 		left: 0;
 		right: 0;
 		
@@ -107,7 +97,6 @@
 	@media #{$tablet-small} {
 		
 		.body-container {
-			top: 760px;
 
 			.panel {
 				padding: 50px 44px;
