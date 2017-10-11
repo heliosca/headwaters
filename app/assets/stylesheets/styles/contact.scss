@@ -1,0 +1,41 @@
+#contact {
+
+	.content-container {
+		@include hero-background('IMG_0246');
+		background-position: bottom;
+		background-size: cover;
+		height: 1000px;
+		padding-bottom: 144px;
+		position: relative;
+
+
+		.form-container {
+			position: absolute;
+			left: 0;
+			right: 0;
+			border-radius: 5px;
+			width: 80%;
+			margin: 0 auto;
+			padding: 22px;
+			background-color: rgba(255,255,255, 0.6);
+
+			.asterisk {
+				color: #9f3a38;
+			}
+
+			input[type="submit"] {
+				display: block;
+				margin: auto;
+			}
+		}
+	}
+
+	@media #{$desktop-small} {
+		.content-container {
+
+			.form-container {
+				width: 50%;
+			}
+		}
+	}
+}

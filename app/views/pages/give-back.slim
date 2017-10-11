@@ -4,15 +4,26 @@
     	h1 1% give back
     section
       .section
-        = image_tag(hw_image_url("Headwaters-77.jpg"))
+        
         .text-container
           h2 Driven by Values
           p Too often—and in every industry—businesses act like they exist in a vacuum, accountable to nothing or no one, bottom line leading the way. Well at Headwaters, we call bullshit on that.
           p Instead, we have a fierce sense of responsibility to serve the things that inspired us to start: community, environmental stewardship and personal well-being. And it’s these three values that guide us in every business decision, big and small. If a growing method, potential partnership or possible new hire isn’t in line with our north stars, then it’s not for us.
+        = image_tag(hw_image_url("Headwaters-77.jpg"))
       .section
+        = image_tag(hw_image_url("Headwaters-95.jpg"))
         .text-container
           h2 The Give Back Program
           p Because of this we’ve committed to giving 1% of our proceeds to non profit organizations that are doing great work in the spaces of community based justice, natural conservation and physical and mental health. . 
-          p This year, we’ve teamed up with Kickflip, a non-profit organization focused on fighting the battle of addiction.  Through the use of holistic, integrative and collaborative methods - Kickflip aims to meet the physical, emotional, and spiritual needs of each individual enrolled in their program.
-          p To learn more about Kickflip's recovery services, please visit their sister organization's website at www.chirecovery.com. 
-        = image_tag(hw_image_url("Headwaters-95.jpg"))
+          p 
+            | This year, we’ve teamed up with 
+            span Kickflip
+            |, a non-profit organization focused on fighting the battle of addiction.  Through the use of holistic, integrative and collaborative methods - 
+            span Kickflip 
+            | aims to meet the physical, emotional, and spiritual needs of each individual enrolled in their program.
+          p 
+            | To learn more about 
+            span Kickflip's 
+            | recovery services, please visit their sister organization's website at #{link_to 'chirecovery.com', 'https://chirecovery.com'}.
+          
+        
