@@ -1,6 +1,6 @@
 #products-index {
 	.hero {
-    @include hero-background('products');
+    @include hero-background('products-index');
 		background-size: cover;
     background-position: center;
 	}
