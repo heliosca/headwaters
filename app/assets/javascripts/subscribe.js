@@ -6,7 +6,7 @@ document.addEventListener("turbolinks:load", function() {
         setTimeout(function() {
           $("#subscribe-window").fadeIn(400);
           globals.subscribeShown = true;
-        }, 100);
+        }, 10000);
       } else {
         $("#subscribe-window").show();
       }
