@@ -1,5 +1,5 @@
 document.addEventListener("turbolinks:load", function() {
-  $("textarea.validate").focus(function() {
+  $("textarea.validate, input.validate").focus(function() {
     if ($(this).hasClass("error")) {
       $(this).removeClass("error");
     }

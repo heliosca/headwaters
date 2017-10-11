@@ -46,7 +46,7 @@ FormValidator.prototype.validateForm = function() {
     validator = validators[validationTypes[validationType].validator];
     if ( !validator($(input[item]).val()) ) {
       errorList += "<li>" + validationTypes[validationType].prompt + "</li>";
-      errorCounterparts.push(validationTypes[validationType].counterpart)
+      errorCounterparts.push(validationTypes[validationType].counterpart);
     } else {
       $("" + validationTypes[validationType].counterpart + "").removeClass("error");
     }
