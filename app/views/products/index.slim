@@ -13,18 +13,22 @@
             = link_to product_path(flower), class: "prod-card" do
               .image-container
                 .overlay
-                = image_tag(hw_image_url("IMG_0461.jpg"))
+                = image_tag(hw_product_image_url("#{flower.name}.jpg"))
               .info-container
                 .name #{flower.name} (#{flower.weed_type.capitalize})
                 .benefits #{flower.benefits.humanize}
               
       #vape.products-container
-        - (0..5).each do | i |
+        - @vapes.each do | vape |
           .column
-            = link_to product_path(@vapes[i]), class: "prod-card" do
+            = link_to product_path(vape), class: "prod-card" do
               .image-container
                 .overlay
-                = image_tag(hw_image_url("IMG_0461.jpg"))
+                - if vape.name == "80%"
+                  = image_tag(hw_product_image_url("80.jpg"))
+                - else
+                  = image_tag(hw_product_image_url("#{vape.name}.jpg"))
               .info-container
-                .name #{@vapes[i].name}
-                .benefits #{@vapes[i].strain} 
+                .name #{vape.name}
+                - if vape.benefits
+                  .benefits #{vape.benefits.humanize} 
