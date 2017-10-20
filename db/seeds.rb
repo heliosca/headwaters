@@ -106,8 +106,9 @@ Product.create([
 	},
 	{ 
 		product_type: 'vape',
-		name: "80%",
-		description: "Not for an occasional user, this 80% THC pen packs a punch.",
+		name: "Timeless",
+		weed_type: "hybrid",
+		description: "Let time slip away! Appropriate for the active, daily consumer, our Timeless 80% THC cartridge provides a strong-hitting full body high!",
 		thc: Faker::Number.decimal(2, 3),
 		cbd: Faker::Number.decimal(2, 3)
 	}
@@ -144,6 +145,6 @@ soli.products << daytime
 anytime = Product.where(name: "Anytime")
 soli.products << anytime
 
-eighty = Product.where(name: "80%")
+eighty = Product.where(name: "Timeless")
 soli.products << eighty
 
