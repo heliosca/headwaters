@@ -110,7 +110,8 @@ Product.create([
 		weed_type: "hybrid",
 		description: "Let time slip away! Appropriate for the active, daily consumer, our Timeless 80% THC cartridge provides a strong-hitting full body high!",
 		thc: Faker::Number.decimal(2, 3),
-		cbd: Faker::Number.decimal(2, 3)
+		cbd: Faker::Number.decimal(2, 3),
+		benefits: "provides robust euphoria and relieves pain"
 	}
 ])
 

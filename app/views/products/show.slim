@@ -1,8 +1,8 @@
 #products-show.content-wrapper
   .content
     .image-container
-	    - if @product.name == '80%'
-	      = image_tag(hw_product_image_url("80.jpg"))
+	    - if @product.product_type == 'flower'
+	      = image_tag(hw_product_image_url("#{@product.name}-n.jpg"))
 	    -else
 	      = image_tag(hw_product_image_url("#{@product.name}.jpg"))
     .text-container
@@ -12,7 +12,10 @@
       - if @product.description
         p.description=@product.description
       - if @product.vape?
-        p.description Our unique "1:1" cartridges are equal parts CBD and THC, allowing for a more well-rounded euphoric state that is less overwhelming than a pure THC cartridge. The THC brings a light buzz, equivalent to drinking a cocktail, while the CBD works to help relax your body and mellow your mind.
+        -if @product.name == 'Timeless'
+          p.description Sourced from a single strain origin, this specialty oil is manufactured from the same single plant from seed to finish. Rotating strains every few months, this month's signature strain is Skywalker OG.  Known for its pungent smell and powerful body effects, this Skywalker OG will certainly have you feeling the "force."  
+        - else
+          p.description Our unique "1:1" cartridges are equal parts CBD and THC, allowing for a more well-rounded euphoric state that is less overwhelming than a pure THC cartridge. The THC brings a light buzz, equivalent to drinking a cocktail, while the CBD works to help relax your body and mellow your mind.
       - if @product.weed_type
         .stat-container
           .stat Type:
