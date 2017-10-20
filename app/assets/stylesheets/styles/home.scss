@@ -22,12 +22,26 @@
 	  }
 	}
 
+	.follow {
+		position: fixed;
+		top: 200px;
+		margin: auto;
+
+		h1 {
+			color: $white;
+
+			
+		}
+	}
+
 	.body-container {
 		z-index: 55;
 		position: absolute;
 		top: 95%;
 		left: 0;
 		right: 0;
+
+
 		
 	  .panel {
 	  	max-width: 992px;
@@ -64,31 +78,6 @@
 	  		  }
   		  } 
   		}
-
-  		.droplet {
-  			text-align: center;
-
-  			h1, img {
-					position: absolute;
-					right: 0;
-					left: 0;
-					margin: 0 auto;
-  			}
-
-  			h1 {
-  				text-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  				top: -90px;
-					color: $white;
-			    font-family: 'Throhand-Regular-Roman';
-			    font-size: 32px;
-			    letter-spacing: 10px;
-  			}
-
-  			img {
-  				top: -200px;
-  		    width: 200px;
-  			}
-  		}
 	  }
 	}
 
@@ -119,14 +108,6 @@
 
     	.panel {
     		border-radius: 5px;
-
-    		.droplet {
-
-    			h1 {
-    				top: -110px;
-    		    font-size: 64px;
-    			}
-    		}
     	}
 		}
 	}
