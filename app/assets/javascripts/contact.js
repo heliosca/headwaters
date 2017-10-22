@@ -14,6 +14,8 @@ document.addEventListener("turbolinks:load", function() {
 
     if (validation) {
       $(".contact-button").attr("disabled", true).val("Please wait...").css("cursor", "default");
+      $("form").hide();
+      $(".loading-icon").show();
       $.ajax({
           url: this.action,
           method: this.method,
@@ -26,4 +28,9 @@ document.addEventListener("turbolinks:load", function() {
       });
     }
   });
+
+  function formSuccess() {
+    $(".loading-icon").hide();
+    $('.user-message').fadeIn();
+  }
 });
