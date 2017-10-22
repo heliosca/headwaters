@@ -3,20 +3,19 @@
 	.content {
 		padding: 33px;
 		background-color: $white;
-		display: flex;
-		flex-wrap: wrap;
+		
 
 		.image-container {
+			text-align: center;
 			position: relative;
 			width: 100%;
 			margin: 0 auto 33px auto;
-			max-width: 500px;
-			max-height: 500px;
+			// max-width: 500px;
+			// max-height: 500px;
 			
 			img {
 				
-				display: block;
-				height: 100%;
+				// display: block;
 				margin: auto;
 			}
 		}
@@ -49,13 +48,33 @@
 				font-size: 20px;
 				margin-bottom: 11px;
 
-				&:last-of-type {
-          margin-bottom: 0;
-				}
-
 				.stat {
 					margin-right: 5px;
 					font-weight: bold;
+				}
+			}
+		}
+
+		&.flower {
+
+			.image-container img:first-of-type {
+				width: 70%;
+			}
+
+		}
+
+		&.vape {
+
+		}
+	}
+
+	@media #{$tablet-small} {
+
+		.content {
+
+			&.flower .image-container {
+				img, img:first-of-type {
+					width: 50%;
 				}
 			}
 		}
@@ -63,15 +82,17 @@
 
 	@media #{$tablet-medium} {
 		.content {
-			justify-content: space-around;
+			display: flex;
 
 			.image-container {
 				margin-bottom: 0;
-				width: 42%;
+				width: 45%;
+				display: flex;
+				align-items: start;
 			}
 			
 			.text-container {
-				width: 42%;
+				width: 45%;
 
 				.name, .benefits {
 					text-align: left;

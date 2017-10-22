@@ -1,10 +1,8 @@
 #products-show.content-wrapper
-  .content
+  div class="content #{@product.product_type == 'flower' ? 'flower' : 'vape'}"
     .image-container
-	    - if @product.product_type == 'flower'
-	      = image_tag(hw_product_image_url("#{@product.name}-n.jpg"))
-	    -else
-	      = image_tag(hw_product_image_url("#{@product.name}.jpg"))
+        = image_tag(hw_product_image_url("#{@product.name}.jpg"))
+        = image_tag(hw_product_image_url("#{@product.name}-n.jpg"))
     .text-container
       .name=@product.name
       - if @product.benefits
@@ -27,5 +25,5 @@
       .stat-container
         .stat Farm:
         .value #{@product.farm.name.titleize} - #{@product.farm.location.titleize}, CA
-        - if @product.farm.website
-          =link_to @product.farm.website, @product.farm.website, class: "shitter"
+      - if @product.farm.website
+         =link_to @product.farm.website, @product.farm.website, target: "_blank"
