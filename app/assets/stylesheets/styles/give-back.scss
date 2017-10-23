@@ -9,18 +9,20 @@
 	.section {
 		background-color: $light-gray;
 		display: flex;
-		align-items: center;
-
-		&:first-child  {
-			padding-bottom: 22px;
-		}
-
+		flex-direction: column;
+		padding-bottom: 22px;
+		
 		img {
-			width: 50%;
+			width: 90%;
+			margin: 0 auto;
 		}
 
 		.text-container {
-			padding: 44px;
+			padding: 0 22px 22px 22px;
+
+			h2 {
+				text-align: center;
+			}
 
 			span {
 				font-size: 18px;
@@ -40,6 +42,30 @@
 				text-transform: uppercase;
 				font-size: 28px;
 				margin-top: 11px;
+			}
+		}
+	}
+
+	@media #{ $tablet-large } {
+
+		.section {
+			flex-direction: row;
+			align-items: center;
+
+			img {
+				width: 50%;
+			}
+
+			.text-container {
+				padding: 44px;
+
+				h2 {
+					text-align: left;
+				}
+			}
+
+			&:last-of-type .text-container {
+				order: 2;
 			}
 		}
 	}

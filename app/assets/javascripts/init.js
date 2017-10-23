@@ -1,7 +1,6 @@
 var globals = {
   HWcrossFader: null,
   subscribeShown: false,
-  optedOut: false,
   modalIn: function(element, animation) {
     element.css("display", "block");
 

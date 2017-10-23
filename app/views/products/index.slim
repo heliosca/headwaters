@@ -13,9 +13,8 @@
             = link_to product_path(flower), class: "prod-card" do
               .image-container
                 .overlay
-                  =image_tag(hw_product_image_url("#{flower.name}.jpg"))
-                  .gradient
-                = image_tag(hw_product_image_url("#{flower.name}-n.jpg"), class: "primary")
+                  =image_tag(hw_product_image_url("#{flower.name}-n.jpg"))
+                = image_tag(hw_product_image_url("#{flower.name}.jpg"), class: "primary")
               .info-container
                 .name #{flower.name} (#{flower.weed_type.capitalize})
                 .benefits #{flower.benefits.humanize}
@@ -26,11 +25,12 @@
             = link_to product_path(vape), class: "prod-card" do
               .image-container
                 .overlay
-                = image_tag(hw_product_image_url("#{vape.name}.jpg"))
+                  = image_tag(hw_product_image_url("#{vape.name}-n.jpg"))
+                = image_tag(hw_product_image_url("#{vape.name}.jpg"), class: "primary")
               .info-container
                 - if vape.name == "Timeless"
                   .name #{vape.name} (80% THC)
                 - else
-                  .name #{vape.name} (1:1)
+                  .name #{vape.name}
                 - if vape.benefits
                   .benefits #{vape.benefits.humanize} 

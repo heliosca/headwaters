@@ -2,9 +2,8 @@ document.addEventListener("turbolinks:load", function() {
 
   var pageTitle = window.location.pathname,
       $nav = $("#nav-bar"),
-      navVisible = false,
-      cannaVisible = true;
-
+      navVisible = false;
+      
   $('a[href="'+pageTitle+'"]').addClass("active");
 
   function toggleNavVisibility() {
@@ -13,6 +12,10 @@ document.addEventListener("turbolinks:load", function() {
   }
 
   if (pageTitle === "/") {
+    var followVisible = true,
+      $follow = $('#follow'),
+      bottom = $(window).height() - $follow[0].getBoundingClientRect().bottom;
+
     $(window).scroll(function() {
       if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         if (!navVisible) {
@@ -24,28 +27,27 @@ document.addEventListener("turbolinks:load", function() {
         }
       }
 
-      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        if (cannaVisible) {
-          $("#concious-cannabis").fadeOut(200, function() {
-            cannaVisible = false;
+      if (document.body.scrollTop > bottom || document.documentElement.scrollTop > bottom) {
+        if (followVisible) {
+          $("#follow").fadeOut(200, function() {
+            followVisible = false;
           });
           
         }
-      } else if (document.body.scrollTop <= 300 || document.documentElement.scrollTop <= 300) {
-        if (!cannaVisible) {
-          $("#concious-cannabis").fadeIn(200, function() {
-            cannaVisible = true;
+      } else if (document.body.scrollTop <= bottom|| document.documentElement.scrollTop <= bottom) {
+        if (!followVisible) {
+          $("#follow").fadeIn(200, function() {
+            followVisible = true;
           });
-          
         }
       }
     });
 
-    // $(window).resize(function() {
-    //   if (window.innerWidth > 767 && document.documentElement.scrollTop < 100) {
-    //     $('.navbar.navbar-fixed-top, .nav-item > a.anchor-tag').css("background-color", "transparent");
-    //   }
-    // })
+    $(window).resize(function() {
+      // if (window.innerWidth > 767 && document.documentElement.scrollTop < 100) {
+      //   $('.navbar.navbar-fixed-top, .nav-item > a.anchor-tag').css("background-color", "transparent");
+      // }
+    })
   } else {
     toggleNavVisibility();
   }

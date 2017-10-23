@@ -1,81 +1,97 @@
-#products-show {
+#products-show .content {
+	padding: 33px;
+	background-color: $white;
 
-	.content {
-		padding: 33px;
-		background-color: $white;
-		display: flex;
-		flex-wrap: wrap;
+	.image-container {
+		text-align: center;
+		position: relative;
+		width: 100%;
+		margin: 0 auto 33px auto;
+		
+		img {
+			margin: auto;
+		}
+	}
 
-		.image-container {
-			position: relative;
-			width: 100%;
-			margin: 0 auto 33px auto;
-			max-width: 500px;
-			max-height: 500px;
-			
-			img {
-				
-				display: block;
-				height: 100%;
-				margin: auto;
-			}
+	.text-container {
+		width: 100%;
+
+		.name, .benefits {
+			text-align: center;
 		}
 
-		.text-container {
-			width: 100%;
+		.name {
+			font-size: 48px;
+			font-weight: bold;
+			margin-bottom: 11px;
+		}
 
-			.name, .benefits {
-				text-align: center;
-			}
+		.benefits {
+			font-size: 24px;
+			font-style: italic;
+			margin-bottom: 33px;
+		}
 
-			.name {
-				font-size: 48px;
+		.description {
+			margin-bottom: 33px;
+		}
+
+		.stat-container {
+			display: flex;
+			font-size: 20px;
+			margin-bottom: 11px;
+
+			.stat {
+				margin-right: 5px;
 				font-weight: bold;
-				margin-bottom: 11px;
-			}
-
-			.benefits {
-				font-size: 24px;
-				font-style: italic;
-				margin-bottom: 33px;
-			}
-
-			.description {
-				margin-bottom: 33px;
-			}
-
-			.stat-container {
-				display: flex;
-				font-size: 20px;
-				margin-bottom: 11px;
-
-				&:last-of-type {
-          margin-bottom: 0;
-				}
-
-				.stat {
-					margin-right: 5px;
-					font-weight: bold;
-				}
 			}
 		}
 	}
 
-	@media #{$tablet-medium} {
-		.content {
-			justify-content: space-around;
+	&.flower .image-container img:first-of-type {
+		width: 70%;
+	}
 
-			.image-container {
-				margin-bottom: 0;
-				width: 42%;
+	&.vape .image-container img {
+		max-height: 300px;
+	}
+
+	@media #{$tablet-small} {
+
+		&.flower .image-container {
+			img, img:first-of-type {
+				width: 50%;
 			}
-			
-			.text-container {
-				width: 42%;
+		}
 
-				.name, .benefits {
-					text-align: left;
-				}
+		&.vape .image-container img {
+			max-height: 400px;
+		}
+	}
+
+	@media #{$tablet-medium} {
+		display: flex;
+
+		.image-container {
+			margin-bottom: 0;
+			width: 45%;
+			display: flex;
+			align-items: start;
+		}
+		
+		.text-container {
+			width: 45%;
+
+			.name, .benefits {
+				text-align: left;
+			}
+		}
+
+		&.vape .image-container {
+			justify-content: center;
+
+			img {
+				margin: auto 0;
 			}
 		}
 	}

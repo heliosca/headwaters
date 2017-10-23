@@ -1,0 +1,64 @@
+
+#subscribe-window {
+	// display: none;
+	background-color: $white;
+	// position: relative;
+	// position: fixed;
+	// bottom: 0;
+	padding: 22px;
+	// width: 100%;
+	text-align: center;
+	// z-index: 99;
+
+	.close {
+		cursor: pointer;
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		border-radius: 5px;
+		border: none;
+		opacity: 0.4;
+		transition: opacity 0.3s ease;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	#subscribe-form {
+		padding: 44px 0;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		h2 {
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			margin: 0 0 11px 0;
+			font-size: 18px;
+		}
+
+		input[type='email'] {
+			margin-bottom: 22px;
+		}
+	}
+
+	@media #{$tablet-medium} {
+		.close {
+			padding: 10px;
+		}
+
+		#subscribe-form {
+
+			h2 {
+				font-size: 36px;
+			}
+
+			input[type='email'] {
+				width: 300px;
+			}
+		}
+	}
+}
+
+
