@@ -24,7 +24,7 @@ document.addEventListener("turbolinks:load", function() {
     }
   }
 
-  $("#subscribe-form").submit(function() {
+  $("#subscribe-form").submit(function(event) {
     event.preventDefault();
 
     var url = $(this).attr('action'),
