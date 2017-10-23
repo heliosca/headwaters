@@ -1,7 +1,7 @@
 #subscribe-window.modal.hidden.transition
 	button.close
 		i.fa.fa-times
-	= form_tag "/subscriptions", id: "subscribe-form" do 
+	= form_tag subscriptions_path, id: "subscribe-form" do 
 		h2 Join our mailing list
 		= email_field_tag :email, nil, placeholder: "email", class: "email"
 		= button_tag "Subscribe", type: "Submit", class: "basic-button"
