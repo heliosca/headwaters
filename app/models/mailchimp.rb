@@ -13,7 +13,6 @@ module Mailchimp
     end
 
     def create_member
-      binding.pry
       self.class.post("/lists/#{list_id}/members", basic_auth: auth, body: body).parsed_response
     end
 
