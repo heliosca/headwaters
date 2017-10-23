@@ -26,11 +26,11 @@ module Mailchimp
       end
 
       def list_id
-        ENV.fetch("MAILCHIMP_LIST_ID")
+        Rails.application.secrets.mailchimp_list_id
       end
 
       def api_key
-        ENV.fetch("MAILCHIMP_KEY")
+        Rails.application.secrets.mailchimp_key
       end
   end
 end
