@@ -35,7 +35,7 @@ document.addEventListener("turbolinks:load", function() {
   });
 
   function subscribeSuccess(response) {
-    globals.modalOut($('#subscribe-window'), "scale");
+    globals.modalOut($subscribeModal, "scale");
     globals.modalOut($dimmer, "fade");
     setSubscribeCookie();
   }
