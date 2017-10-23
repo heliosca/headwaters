@@ -8,15 +8,11 @@ module Mailchimp
     end
 
     def list
-      p "*"*100
-      p self.class.get("/lists/#{list_id}", basic_auth: auth).parsed_response
-      p "*"*100
+      self.class.get("/lists/#{list_id}", basic_auth: auth).parsed_response
     end
 
     def create_member
-      p "*"*100
-      p self.class.post("/lists/#{list_id}/members", basic_auth: auth, body: body).parsed_response
-      p "*"*100
+      self.class.post("/lists/#{list_id}/members", basic_auth: auth, body: body).parsed_response
     end
 
     private
