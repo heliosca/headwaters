@@ -1,6 +1,7 @@
 module Mailchimp
   class Client
     include HTTParty
+    attr_reader :email
     base_uri "https://us16.api.mailchimp.com/3.0"
 
     def initialize(email)
@@ -12,13 +13,14 @@ module Mailchimp
     end
 
     def create_member
+      binding.pry
       self.class.post("/lists/#{list_id}/members", basic_auth: auth, body: body).parsed_response
     end
 
     private
 
       def body
-        { email_address: @email, status: "subscribed" }.to_json
+        { email_address: email, status: "subscribed" }.to_json
       end
 
       def auth
