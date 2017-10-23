@@ -31,7 +31,11 @@ document.addEventListener("turbolinks:load", function() {
         data = $(this).serialize(),
         success = subscribeSuccess;
 
-    $.post(url, data, success);
+    $.post(url, data)
+      .done(success)
+      .fail(function(err) {
+        console.log(err);
+      });
   });
 
   function subscribeSuccess(response) {
