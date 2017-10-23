@@ -34,7 +34,7 @@ document.addEventListener("turbolinks:load", function() {
     $.post(url, data)
       .done(success)
       .fail(function(err) {
-        console.log(err)
+        console.log(err);
       });
   });
 
