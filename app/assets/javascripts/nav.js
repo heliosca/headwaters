@@ -4,7 +4,6 @@ document.addEventListener("turbolinks:load", function() {
       $nav = $("#nav-bar"),
       navVisible = false;
       
-
   $('a[href="'+pageTitle+'"]').addClass("active");
 
   function toggleNavVisibility() {
@@ -44,11 +43,11 @@ document.addEventListener("turbolinks:load", function() {
       }
     });
 
-    // $(window).resize(function() {
-    //   if (window.innerWidth > 767 && document.documentElement.scrollTop < 100) {
-    //     $('.navbar.navbar-fixed-top, .nav-item > a.anchor-tag').css("background-color", "transparent");
-    //   }
-    // })
+    $(window).resize(function() {
+      // if (window.innerWidth > 767 && document.documentElement.scrollTop < 100) {
+      //   $('.navbar.navbar-fixed-top, .nav-item > a.anchor-tag').css("background-color", "transparent");
+      // }
+    })
   } else {
     toggleNavVisibility();
   }

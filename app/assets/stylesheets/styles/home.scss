@@ -1,7 +1,7 @@
 #home-container {
 	height: 100%;
 
-	h1, h2 {
+	h1 {
 		font-family: 'Throhand-Regular-Roman';
 		margin: 0 0 22px 0;
 	}
@@ -42,7 +42,6 @@
 
 		h1 {
 	    line-height: 1.5;
-	    
 	    font-size: 32px;
 	    letter-spacing: 10px;
 		}
@@ -61,40 +60,64 @@
 	  	padding: 22px 33px 80px 33px;
 	  	margin: 0 auto 80px auto;
 
+	  	.hw-logo {
+	  		height: 100px;
+	  		display: block;
+	  		margin: 0 auto;
+	  	}
+
+	  	.quadrant-container {
+	  		padding-bottom: 11px;
+
+	  		.quadrant {
+	  			display: block;
+	  			margin-bottom: 22px;
+	  			position: relative;
+
+	  			.gradient {
+	  				position: absolute;
+	  				top: 0;
+	  				height: 100%;
+	  				width: 100%;
+	  				background-color: $black;
+	  				opacity: 0.3
+	  			}
+
+	  			.label {
+	  				text-transform: uppercase;
+	  				position: absolute;
+	  				bottom: 22px;
+	  				right: 0;
+	  				left: 0;
+	  				font-size: 36px;
+	  				text-align: center;
+	  				color: $white;
+	  			}
+  			}
+	  	}
+
 			h2 {
 				text-align: center;
 				font-size: 36px;
+				text-transform: uppercase
 			}
 
-  		.home-text {
-  		  max-width: 800px;
-  		  margin: 0 auto;
+		  .text-block {
+		  	max-width: 800px;
+		  	margin: 0 auto;
+		  	font-size: 18px;
+		  	padding-bottom: 22px;
+		  	text-align: justify;
+		  }
 
-  		  .header {
-  		  	text-align: center;
-  		  	font-weight: bold;
-  		  	font-size: 24px;
-  		  	margin: 22px 0;
+		  .button-container {
+        text-align: center;
+
+		  	a {
+		  		margin-top: 44px;
+					padding: 1.2em;
   		  }
-
-  		  .text-block {
-  		  	font-size: 18px;
-  		  	padding-bottom: 22px;
-
-  		  	&:last-of-type {
-						margin: 0;
-  		  	}
-  		  }
-
-  		  .button-container {
-          text-align: center;
-
-  		  	a {
-  		  		margin-top: 44px;
-						padding: 1.2em;
-	  		  }
-  		  } 
-  		}
+		  } 
 	  }
 	}
 
@@ -118,7 +141,42 @@
 			.panel {
 				padding: 33px 44px 44px 44px;
 
-				.home-text .text-block {
+				.quadrant-container {
+					display: flex;
+					flex-wrap: wrap;
+
+					.quadrant {
+						margin-bottom: 22px;
+						overflow: hidden;
+						flex-basis: 50%;
+						position: relative;
+
+						.label {
+							font-size: 48px;
+						}
+
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+							transition: all 0.3s ease
+						}
+
+						&:nth-child(odd) {
+							border-right: 11px solid transparent;
+						}
+
+						&:nth-child(even) {
+							border-left: 11px solid transparent;
+						}
+
+						&:hover img {
+							transform: scale(1.1);
+						}
+					}
+				}
+
+				.text-block {
 		      font-size: 22px;
 				}
 
@@ -152,107 +210,10 @@
 		}
 	}
 
-		@media #{$desktop-small} {
+	@media #{$desktop-small} {
 
-			#follow h1 {
-				font-size: 86px;
-			}
-		}
-}
-
-
-
-#subscribe-window {
-	display: none;
-	background-color: $white;
-	position: fixed;
-	bottom: 0;
-	padding: 22px;
-	width: 100%;
-	text-align: center;
-	z-index: 99;
-
-	.close {
-		cursor: pointer;
-		position: absolute;
-		top: 5px;
-		right: 5px;
-		border-radius: 5px;
-		border: none;
-		opacity: 0.4;
-		transition: opacity 0.3s ease;
-
-		&:hover {
-			opacity: 1;
-		}
-	}
-
-	#subscribe-form {
-		display: flex;
-		align-items: center;
-		flex-direction: column;
-		justify-content: space-evenly;
-
-		h2 {
-			text-transform: uppercase;
-			font-family: $throhand, serif;
-			letter-spacing: 2px;
-			margin: 0 0 11px 0;
-			font-size: 12px;
-		}
-
-		.form-fields {
-			display: flex;
-			align-items: center;
-
-			input {
-				display: block;
-				font-size: 1em;
-				margin: 0 auto;
-				padding: 0.35em 0.67861429em;
-			}
-			
-			input[type='email'] {
-				margin-right: 11px;
-			}
-
-			input[type='submit'], button[type='submit'] {
-
-				&:not(.mobile-button) {
-					display: none;
-				}
-			}
-		}
-	}
-
-	@media #{$tablet-small} {
-		.close {
-			padding: 10px;
-		}
-
-		#subscribe-form {
-			flex-direction: row;
-
-			h2 {
-				font-size: 22px;
-				margin-bottom: 0;
-			}
-
-			.form-fields {
-
-				input[type='submit'], button[type='submit'] {
-
-					&:not(.mobile-button) {
-						display: block;
-					}
-
-					&.mobile-button {
-						display: none;
-					}
-				}
-			}
+		#follow h1 {
+			font-size: 86px;
 		}
 	}
 }
-
-
