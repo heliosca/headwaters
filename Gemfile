@@ -12,6 +12,7 @@ gem 'administrate', '~> 0.3.0'
 gem 'autoprefixer-rails'
 gem 'bcrypt', '~> 3.1.7'
 gem 'bourbon' # added to prevent high voltage bourbon unreadable error
+gem 'dotenv-rails'
 gem 'faker'
 gem 'high_voltage'
 gem 'httparty'
@@ -24,13 +25,13 @@ gem 'sprockets-rails'
 gem 'slim'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
+gem 'dotenv-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
   gem 'bundler-audit', require: false
-  gem 'dotenv-rails'
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'rspec-rails'
@@ -40,6 +41,7 @@ group :development do
   gem 'bullet'
   gem 'capistrano', '~> 3.7', '>= 3.7.1'
   gem 'capistrano-rails', '~> 1.2'
+  gem 'capistrano-rails-logs-tail'
   gem 'capistrano-passenger', '~> 0.2.0'
   gem 'capistrano-rbenv', '~> 2.1'
   gem 'listen', '~> 3.0.5'
