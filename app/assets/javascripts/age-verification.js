@@ -20,6 +20,7 @@ document.addEventListener("turbolinks:load", function() {
         globals.modalIn($subscribeModal, "scale");
         globals.modalIn($dimmer, "fade");
         globals.subscribeShown = true;
+        $("body").css("overflow", "hidden");
       }, 10000);
     }
   }
@@ -65,6 +66,7 @@ document.addEventListener("turbolinks:load", function() {
       $subscribeModal.css("margin-top", "-" + $(".modal").height()/2 + "px");
       globals.modalIn($subscribeModal, "scale");
       globals.modalIn($dimmer, "fade");
+      globals.subscribeShown = true;
       // document.getElementById("dimmer").addEventListener("touchmove", prevent, {passive: false});
       $("body").css("overflow", "hidden");
     }, 450);
