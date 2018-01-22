@@ -14,15 +14,15 @@ document.addEventListener("turbolinks:load", function() {
       $("body").css("overflow", "hidden");
     }, 1500);
   } else {
-    if (!subscribeCookie && !globals.subscribeShown) {
-      setTimeout(function() {
-        $subscribeModal.css("margin-top", "-" + $(".modal").height()/2 + "px");
-        globals.modalIn($subscribeModal, "scale");
-        globals.modalIn($dimmer, "fade");
-        globals.subscribeShown = true;
-        $("body").css("overflow", "hidden");
-      }, 10000);
-    }
+    // if (!subscribeCookie && !globals.subscribeShown) {
+    //   setTimeout(function() {
+    //     $subscribeModal.css("margin-top", "-" + $(".modal").height()/2 + "px");
+    //     globals.modalIn($subscribeModal, "scale");
+    //     globals.modalIn($dimmer, "fade");
+    //     globals.subscribeShown = true;
+    //     $("body").css("overflow", "hidden");
+    //   }, 10000);
+    // }
   }
 
   $("#subscribe-form").submit(function(event) {
@@ -62,14 +62,14 @@ document.addEventListener("turbolinks:load", function() {
     $("body").css("overflow", "visible");
     setAgeCookie();
 
-    setTimeout(function() {
-      $subscribeModal.css("margin-top", "-" + $(".modal").height()/2 + "px");
-      globals.modalIn($subscribeModal, "scale");
-      globals.modalIn($dimmer, "fade");
-      globals.subscribeShown = true;
-      // document.getElementById("dimmer").addEventListener("touchmove", prevent, {passive: false});
-      $("body").css("overflow", "hidden");
-    }, 450);
+    // setTimeout(function() {
+    //   $subscribeModal.css("margin-top", "-" + $(".modal").height()/2 + "px");
+    //   globals.modalIn($subscribeModal, "scale");
+    //   globals.modalIn($dimmer, "fade");
+    //   globals.subscribeShown = true;
+    //   // document.getElementById("dimmer").addEventListener("touchmove", prevent, {passive: false});
+    //   $("body").css("overflow", "hidden");
+    // }, 450);
   });
 
   function setAgeCookie() {
